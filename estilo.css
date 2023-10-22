@@ -160,13 +160,8 @@ section{
     background-color: white;
     height: 1000px;
     width: 100%;
-    border: 2px solid black;
+/*     border: 2px solid black; */
 }
-
-/* #home{
-    top: 95px;
-    position: absolute;
-} */
 
 h1{
     color: #373536;

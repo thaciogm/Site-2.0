@@ -164,12 +164,14 @@ section{
 }
 
 h1{
+    margin: 0px;
     color: #373536;
     font-family: QuicksandBold;
     font-size: 60px;
 }
 
 h2{
+    margin: 0px;
     color: #373536;
     font-family: QuicksandBold;
     font-size: 43.9px;

@@ -18,11 +18,20 @@
     src: url(_fonts/Quicksand-Bold.ttf);
 }
 
+html{
+    scroll-behavior: smooth;
+ }
+ 
+ *{
+     box-sizing: border-box;
+ }
+
 body{
     border: 0px;
     padding: 0px;
     margin: 0px;
     background-color: #ECF9FF;
+    padding-top: 95px;
 }
 
 .topnav{
@@ -32,13 +41,12 @@ body{
     background-color: #ECF9FF;
     height: 95px;
     width: 100%;
-/*     text-align: center; */
-    border: 0px;
     padding-left: 20px;
-    margin: 0px;
-    box-sizing: content-box;
-    border: 30px;
-/*     display: inline-block; */
+    z-index: 100;
+}
+
+.topnav .icon {
+    display: none;
 }
 
 .topnav-child{
@@ -47,13 +55,7 @@ body{
     align-items: center;
     float: left;
     justify-content: center;
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
     height: 100%;
-
-    /* display: table; */
-/*     vertical-align: middle; */
 }
 
 #itens-menu{
@@ -71,6 +73,10 @@ body{
     vertical-align: middle; 
     text-align: center;
     margin-right: 5%;
+}
+
+#buttons-menu a{
+    margin-right: 10px;
 }
 
 a:link{
@@ -105,8 +111,13 @@ a:active{
     font-size: 18px;
     border: 1px solid #01BAFF;
     border-radius: 6px;
-}
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    justify-content: center;
+}
 
 .btn-escuro{
     color: #ECF9FF;
@@ -115,17 +126,33 @@ a:active{
     background-color: #01BAFF;
     border: 1px solid #ECF9FF;
     border-radius: 6px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    justify-content: center;
+}
+
+.img-btn {
+    margin-right: 5%;
+}
+
+.img-btn, .span-btn{
+    display: inline-table; 
+    vertical-align: middle; 
+    text-align: center;
 }
 
 #btn-login-cab{
-    padding-top: 15px;
-    height: 38px;
+    padding-top: 14px;
+    height: 53px;
     width: 119px;
 }
 
 #btn-cadastro-cab{
-    padding-top: 15px;
-    height: 38px;
+    padding-top: 14px;
+    height: 53px;
     width: 225px;
 }
 
@@ -134,5 +161,21 @@ section{
     height: 1000px;
     width: 100%;
     border: 2px solid black;
-    box-sizing: border-box;
+}
+
+/* #home{
+    top: 95px;
+    position: absolute;
+} */
+
+h1{
+    color: #373536;
+    font-family: QuicksandBold;
+    font-size: 60px;
+}
+
+h2{
+    color: #373536;
+    font-family: QuicksandBold;
+    font-size: 43.9px;
 }

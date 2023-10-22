@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
     <head>
+        <meta name="description" content="Aplicativo para análise estrutural em modelos de vigas">
+        <meta name="keywords" content="Professor Estrutural, Professor de Estruturas, Estruturas, Análise de Estruturas, análise estrutural, vigas, software, aplicativo, cálculo estrutural, ensino de estruturas, engenharia">
+        <meta name="author" content="Thacio Guimarães Mendes">
         <title>Professor Estrutural</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+        <link rel="icon" type="image/ico" href="_images/logo-icon.png" />
         <link rel="stylesheet" href="estilo.css"/>
     </head>
     <body>
@@ -18,8 +21,8 @@
                 <a href="#baixar">Baixar</a>
             </div>
             <div class="topnav-child"  id="buttons-menu">
-                <a href="" class="btn-claro" id="btn-login-cab">Login</a>
-                <a href="" class="btn-escuro" id="btn-cadastro-cab"><img src="_images/vector_cadastro.png">Cadastrar</a>
+                <a href="" class="btn-claro" id="btn-login-cab"><span class="span-btn">Login</span></a>
+                <a href="" class="btn-escuro" id="btn-cadastro-cab"><img class="img-btn" src="_images/vector_cadastro.png"><span class="span-btn">Cadastrar</span></a>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                     <i class="fa fa-bars"></i>
                 </a>
@@ -27,38 +30,51 @@
         </div>
         <section id="home">
             <div>
-
+                <h1>Aprenda e faça sua análise estrutural com o Professor!</h1>
             </div>
         </section>
         <section id="como_usar">
             <div>
-
+                <h2>Como o Software Funciona</h2>
             </div>
         </section>
         <section id="recursos">
             <div>
-
+                <h2>Podemos oferecer as melhores facilidades para você!</h2>
             </div>
         </section>
         <section id="numeros_avaliacoes">
             <div>
-
+                <h2>Por que somos a melhor escolha?</h2>
             </div>
         </section>
         <section id="planos">
             <div>
-
+                <h2>Simples. Transparente.</h2>
+                <h2>Conheça Professor Estrutural.</h2>
             </div>
         </section>
         <section id="duvidas">
             <div>
-
+                <h2>Temos um FAQ para te informar melhor</h2>
             </div>
         </section>
         <section id="baixar">
             <div>
-
+                <h2>Confie no Professor para ajudar você!</h2>
             </div>
         </section>
+
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
     </body>
 </html>

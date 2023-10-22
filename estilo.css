@@ -1,0 +1,138 @@
+@font-face {
+    font-family: RubikSemiBold;
+    src: url(_fonts/Rubik-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: InterBold;
+    src: url(_fonts/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: InterRegular;
+    src: url(_fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: QuicksandBold;
+    src: url(_fonts/Quicksand-Bold.ttf);
+}
+
+body{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #ECF9FF;
+}
+
+.topnav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ECF9FF;
+    height: 95px;
+    width: 100%;
+/*     text-align: center; */
+    border: 0px;
+    padding-left: 20px;
+    margin: 0px;
+    box-sizing: content-box;
+    border: 30px;
+/*     display: inline-block; */
+}
+
+.topnav-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    justify-content: center;
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+
+    /* display: table; */
+/*     vertical-align: middle; */
+}
+
+#itens-menu{
+/*     background-color: pink; */
+    width: 70%;
+}
+
+#buttons-menu{
+/*     background-color: aqua; */
+    width: 30%;
+}
+
+.topnav-child a{
+    display: inline-table; 
+    vertical-align: middle; 
+    text-align: center;
+    margin-right: 5%;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+a:active{
+    text-decoration: none;
+}
+
+#itens-menu a{
+    font-family: RubikSemiBold;
+    font-size: 18px;
+    color: #373536;
+}
+
+#buttons-menu a{
+
+}
+
+.btn-claro{
+    color: #01BAFF;
+    font-family: InterBold;
+    font-size: 18px;
+    border: 1px solid #01BAFF;
+    border-radius: 6px;
+}
+
+
+.btn-escuro{
+    color: #ECF9FF;
+    font-family: InterBold;
+    font-size: 18px;
+    background-color: #01BAFF;
+    border: 1px solid #ECF9FF;
+    border-radius: 6px;
+}
+
+#btn-login-cab{
+    padding-top: 15px;
+    height: 38px;
+    width: 119px;
+}
+
+#btn-cadastro-cab{
+    padding-top: 15px;
+    height: 38px;
+    width: 225px;
+}
+
+section{
+    background-color: white;
+    height: 1000px;
+    width: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+}

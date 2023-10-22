@@ -1,21 +1,21 @@
 @font-face {
     font-family: RubikSemiBold;
-    src: url(_fonts/Rubik-SemiBold.ttf);
+    src: url(fonts/Rubik-SemiBold.ttf);
 }
 
 @font-face {
     font-family: InterBold;
-    src: url(_fonts/Inter-Bold.ttf);
+    src: url(fonts/Inter-Bold.ttf);
 }
 
 @font-face {
     font-family: InterRegular;
-    src: url(_fonts/Inter-Regular.ttf);
+    src: url(fonts/Inter-Regular.ttf);
 }
 
 @font-face {
     font-family: QuicksandBold;
-    src: url(_fonts/Quicksand-Bold.ttf);
+    src: url(fonts/Quicksand-Bold.ttf);
 }
 
 html{

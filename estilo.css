@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: InterMedium;
+    src: url(fonts/Inter-Medium.ttf);
+}
+
+@font-face {
     font-family: QuicksandBold;
     src: url(fonts/Quicksand-Bold.ttf);
 }
@@ -157,11 +162,35 @@ a:active{
     width: 225px;
 }
 
+.btn-home{
+/*     padding-top: 14px; */
+    height: 53px;
+    width: 225px;
+}
+
 section{
     background-color: white;
     height: 1000px;
     width: 100%;
 /*     border: 2px solid black; */
+}
+
+#home{
+/*     background-color: #ECF9FF; */
+    background: linear-gradient(#ECF9FF, #ECF9FF, white);
+    height: 850px;/* 866 altura do cabeçalho da segunda section até menu nav */
+    width: 100%;
+}
+
+#home-div {
+    position: relative;
+    top: 156px;
+    left: 12%;
+}
+
+#home-div> * {
+    display: block;
+    margin-bottom: 30px;
 }
 
 h1{
@@ -176,6 +205,25 @@ h2{
     color: #373536;
     font-family: QuicksandBold;
     font-size: 43.9px;
+}
+
+h4{
+    margin: 0px;
+    color: #373536;
+    font-family: InterMedium;
+    font-style: normal;
+    font-size: 16px;
+}
+
+p{
+    margin: 0px;
+    color: #373536;
+    font-family: InterRegular;
+    font-size: 18px;
+}
+
+.side-by-side{
+    display: inline-flex;
 }
 
 
@@ -198,9 +246,28 @@ h2{
         float: left;
         display: block;
     }
+
+    h1{
+        font-size: 35px;
+    }
+    
+    h2{
+        font-size: 26px;
+    }
+    
+    h4{
+        font-size: 12px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+
+
 }
 
 @media screen and (max-width: 1000px) {
+    /* 320 - 760 - 960 */
     #itens-menu a:not(:first-child) {
         display: none;
     }

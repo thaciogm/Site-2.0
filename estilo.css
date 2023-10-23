@@ -46,9 +46,9 @@ body{
     background-color: #ECF9FF;
     height: 95px;
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    z-index: 100;
+/*     padding-left: 20px;
+    padding-right: 20px; */
+/*     z-index: 100; */
 }
 
 .topnav .icon {
@@ -182,15 +182,42 @@ section{
     width: 100%;
 }
 
-#home-div {
+/* #home-div {
     position: relative;
     top: 156px;
-    left: 12%;
+    left: 0;
+    width: auto;
 }
 
 #home-div> * {
     display: block;
     margin-bottom: 30px;
+    margin-left: 7%;
+}
+ */
+#home-div-child {
+    position: relative;
+    top: 156px;
+    left: 0;
+    width: auto;
+}
+
+#imagem-apresentacao{
+    float: right;
+    position: relative;
+    top: 44px;
+    left: 200px;
+    width: auto;
+}
+
+#home-div-child > * {
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 7%;
+}
+
+#home-div h4 {
+    margin-bottom: 10px;
 }
 
 h1{
@@ -224,6 +251,10 @@ p{
 
 .side-by-side{
     display: inline-flex;
+}
+
+section#home div#home-div div.side-by-side a:first-child{
+    margin-right: 29px;
 }
 
 
@@ -263,12 +294,33 @@ p{
         font-size: 12px;
     }
 
+    .btn-claro{
+        font-size: 16px;
+    }
+    
+    .btn-escuro{
+        font-size: 16px;
+    }
+
+    .btn-home{
+        /*     padding-top: 14px; */
+        height: 44px;
+        width: 162px;
+    }
+
+    section#home div#home-div div.side-by-side a:first-child{
+        margin-right: 16px;
+    }
+    
 
 }
 
 @media screen and (max-width: 1000px) {
     /* 320 - 760 - 960 */
     #itens-menu a:not(:first-child) {
+        display: none;
+    }
+    #imagem-apresentacao{
         display: none;
     }
     #buttons-menu a{

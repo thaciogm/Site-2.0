@@ -56,14 +56,16 @@ body{
 }
 
 .topnav:first-child {
-    padding-left: 7%;
+    padding-left: 4%;
 }
 
 .topnav-child{
-    display: flex;
 /*     justify-content: center; */
+
+    display: flex;
     align-items: center;
     float: left;
+
     height: 100%;
 }
 
@@ -75,32 +77,20 @@ body{
 #buttons-menu{
 /*     background-color: aqua; */
     width: 30%;
+    padding-right: 3%;
 }
 
 .topnav-child a{
-    display: inline-table; 
-    vertical-align: middle; 
-    text-align: center;
     margin-right: 6%;
 }
 
-#buttons-menu a{
+
+#buttons-menu a:first-child{
     margin-right: 10px;
+    margin-left: auto;
 }
 
-a:link{
-    text-decoration: none;
-}
-
-a:visited{
-    text-decoration: none;
-}
-
-a:hover{
-    text-decoration: none;
-}
-
-a:active{
+a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 
@@ -108,10 +98,6 @@ a:active{
     font-family: RubikSemiBold;
     font-size: 18px;
     color: #373536;
-}
-
-#buttons-menu a{
-
 }
 
 .btn-claro{
@@ -154,13 +140,13 @@ a:active{
 }
 
 #btn-login-cab{
-    padding-top: 14px;
+/*     padding-top: 14px; */
     height: 53px;
     width: 119px;
 }
 
 #btn-cadastro-cab{
-    padding-top: 14px;
+/*     padding-top: 14px; */
     height: 53px;
     width: 225px;
 }
@@ -200,30 +186,26 @@ section{
  */
 #home-div-child {
     padding-top: 156px;
-    width: 50%;
+    padding-left: 7%;
+    width: 60%;
     height: 100%;
 }
 
 #div-imagem-apresentacao{
-    padding-right: 1%;
+    padding-right: 5%;
     padding-top: 44px;
-    width: 50%;
-
-    display: flex;
-/*     justify-content: center; */
-/*     align-items: center; */
-    float: right;
+    width: 40%;
     height: 100%;
 }
 
 #imagem-apresentacao{
-    
+    float: right;
 }
 
 #home-div-child > * {
     display: block;
     margin-bottom: 30px;
-    margin-left: 14%;
+/*     margin-left: 14%; */
 }
 
 #home-div h4 {
@@ -312,7 +294,7 @@ section#home div#home-div div.side-by-side a:first-child{
         font-size: 16px;
     }
 
-    .btn-home{
+    .btn{
         /*     padding-top: 14px; */
         height: 44px;
         width: 162px;
@@ -325,12 +307,98 @@ section#home div#home-div div.side-by-side a:first-child{
 
 }
 
+@media screen and (max-width: 760px) {
+    /* 320 - 480 - 760 - 960 - 1200 - 1600*/
+    #imagem-apresentacao{
+        display: none;
+    }
+
+    #home-div-child {
+        padding-left: 3%;
+        width: 100%;
+    }
+    
+    #div-imagem-apresentacao{
+        width: 0%;
+    }
+
+    .topnav-child a{
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 1270px) {
+    /* 320 - 480 - 760 - 960 - 1200 - 1600*/
+/*     .topnav-child a{
+        margin-right: 3%;
+    } */
+
+    h1{
+        font-size: 35px;
+    }
+    
+    h2{
+        font-size: 26px;
+    }
+    
+    h4{
+        font-size: 12px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+
+    .btn-claro{
+        font-size: 16px;
+    }
+    
+    .btn-escuro{
+        font-size: 16px;
+    }
+
+    .btn{
+        /*     padding-top: 14px; */
+        height: 44px;
+        width: 162px;
+    }
+
+    #btn-login-cab{
+    /*     padding-top: 14px; */
+        height: 44px;
+        width: 86px;
+    }
+            
+    #btn-cadastro-cab{
+    /*     padding-top: 14px; */
+        height: 44px;
+        width: 162px;
+    }
+
+    section#home div#home-div div.side-by-side a:first-child{
+        margin-right: 16px;
+    }
+
+    #home{
+            height: 427px;/* 866 altura do cabeçalho da segunda section até menu nav */
+    }
+
+    body{
+        padding-top: 64px;
+    }
+    
+    .topnav{
+        height: 64px;
+    }
+
+    #itens-menu a{
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     /* 320 - 760 - 960 */
     #itens-menu a:not(:first-child) {
-        display: none;
-    }
-    #imagem-apresentacao{
         display: none;
     }
     #buttons-menu a{

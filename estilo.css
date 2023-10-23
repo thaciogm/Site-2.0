@@ -185,21 +185,34 @@ section{
 }
  */
 #home-div-child {
-    padding-top: 156px;
-    padding-left: 7%;
+/*     padding-top: 156px; */
+    padding-left: 114px;
     width: 60%;
     height: 100%;
+/*     vertical-align: middle;
+    align-items: center; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+/*     align-items: center; */
 }
 
 #div-imagem-apresentacao{
     padding-right: 5%;
-    padding-top: 44px;
+/*     padding-top: 44px; */
     width: 40%;
     height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #imagem-apresentacao{
     float: right;
+    vertical-align: middle;
+    align-items: center;
+    z-index: 1;
 }
 
 #home-div-child > * {
@@ -217,6 +230,8 @@ h1{
     color: #373536;
     font-family: QuicksandBold;
     font-size: 60px;
+    line-height: 53px;
+    z-index: 1;
 }
 
 h2{
@@ -224,6 +239,7 @@ h2{
     color: #373536;
     font-family: QuicksandBold;
     font-size: 43.9px;
+    z-index: 1;
 }
 
 h4{
@@ -232,6 +248,7 @@ h4{
     font-family: InterMedium;
     font-style: normal;
     font-size: 16px;
+    z-index: 1;
 }
 
 p{
@@ -239,6 +256,7 @@ p{
     color: #373536;
     font-family: InterRegular;
     font-size: 18px;
+    z-index: 1;
 }
 
 .side-by-side{
@@ -247,6 +265,18 @@ p{
 
 section#home div#home-div div.side-by-side a:first-child{
     margin-right: 29px;
+}
+
+#circulado{
+    position: absolute;
+    top: 423px;
+    left: 179px;
+}
+
+#sublinhado-home{
+    position: absolute;
+    top: 411px;
+    left: 114px;
 }
 
 
@@ -335,6 +365,7 @@ section#home div#home-div div.side-by-side a:first-child{
 
     h1{
         font-size: 35px;
+        line-height: 35px;
     }
     
     h2{
@@ -393,6 +424,24 @@ section#home div#home-div div.side-by-side a:first-child{
 
     #itens-menu a{
         font-size: 14px;
+    }
+
+    #home-div-child > * {
+        margin-bottom: 20px;
+    }
+
+    #circulado{
+        top: 214px;
+        left: 104px;
+    }
+    
+    #sublinhado-home{
+        top: 204px;
+        left: 50px;
+    }
+
+    #home-div-child {
+        padding-left: 50px;
     }
 }
 

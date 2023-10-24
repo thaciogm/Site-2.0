@@ -279,6 +279,12 @@ section#home div#home-div div.side-by-side a:first-child{
     margin-right: 29px;
 }
 
+.fundo{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
 #circulado{
     position: absolute;
     top: 423px;

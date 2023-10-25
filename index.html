@@ -11,21 +11,38 @@
         <link rel="stylesheet" href="estilo.css"/>
     </head>
     <body>
-        <div class="topnav" id="myTopnav">
-            <div class="topnav-child" id="itens-menu">
-                <a href="#home"><img class="logo" src="images/logo.svg"></a>
-                <a href="#home">Home</a>
-                <a href="#como_usar">Como usar</a>
-                <a href="#planos">Planos</a>
-                <a href="#duvidas">Dúvidas</a>
-                <a href="#baixar">Baixar</a>
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <a href="#home"><img class="logo" src="images/logo.svg"></a>
+                </div>
+                <div class="menu">
+                    <nav id="myNav">
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#como_usar">Como usar</a></li>
+                            <li><a href="#planos">Planos</a></li>
+                            <li><a href="#duvidas">Dúvidas</a></li>
+                            <li><a href="#baixar">Baixar</a></li>
+                            <li class="li-btn">
+                                <a href="" class="btn btn-claro" id="btn-login-cab">
+                                    <span class="span-btn">Login</span>
+                                </a>
+                            </li>
+                            <li class="li-btn">
+                                <a href="" class="btn btn-escuro" id="btn-cadastro-cab">
+                                    <img class="img-btn" src="images/vector_cadastro.svg">
+                                    <span class="span-btn">Cadastrar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <img src="images/hamburger_menu.svg">
+                    </a>
+                </div>
             </div>
-            <div class="topnav-child"  id="buttons-menu">
-                <a href="" class="btn btn-claro" id="btn-login-cab"><span class="span-btn">Login</span></a>
-                <a href="" class="btn btn-escuro" id="btn-cadastro-cab"><img class="img-btn" src="images/vector_cadastro.svg"><span class="span-btn">Cadastrar</span></a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="images/hamburger_menu.svg"></a>
-            </div>
-        </div>
+        </header>
         <section id="home">
             <div class="side-by-side" id="home-div">
                 <div id="home-div-child">
@@ -126,11 +143,11 @@
 
         <script>
             function myFunction() {
-                var x = document.getElementById("myTopnav");
-                if (x.className === "topnav") {
-                    x.className += " responsive";
+                var x = document.getElementById("myNav");
+                if(x.style.right === '-200px' ) {
+                    x.style.right = '0';
                 } else {
-                    x.className = "topnav";
+                    x.style.right = '-200px'; 
                 }
             }
         </script>

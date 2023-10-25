@@ -171,23 +171,24 @@ section{
     background: linear-gradient(#ECF9FF, #ECF9FF, #ECF9FF, white);
     height: 850px;/* 866 altura do cabeçalho da segunda section até menu nav */
     width: 100%;
-    z-index: 1;
+    position: relative;
+/*     z-index: 1; */
 }
 
 #home-div {
     width: 100%;
     height: 100%;
     z-index: 1;
+    position: absolute;
 }
 
-/* 
-
-#home-div> * {
-    display: block;
-    margin-bottom: 30px;
-    margin-left: 7%;
+#fundo-home{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
- */
+
 #home-div-child {
 /*     padding-top: 156px; */
     padding-left: 114px;
@@ -279,75 +280,68 @@ section#home div#home-div div.side-by-side a:first-child{
     margin-right: 29px;
 }
 
-.fundo{
+/* .fundo{
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
+} */
+
+#fundo-home img{
+    position: absolute;
 }
 
 #circulado{
-    position: absolute;
-    top: 423px;
+    top: 328px;
     left: 179px;
 }
 
 #sublinhado-home{
-    position: absolute;
-    top: 411px;
+    top: 316px;
     left: 114px;
 }
 
 #decoracao-home-1{
-    position: absolute;
-    top: 260px;
+    top: 165px;
     left: 7%;
 }
 
 #decoracao-home-2{
-    position: absolute;
-    top: 740px;
+    top: 645px;
     left: 7%;
 }
 
 #decoracao-home-3{
-    position: absolute;
-    top: 200px;
+    top: 105px;
     left: 50%;
 }
 
 #decoracao-home-4{
-    position: absolute;
-    top: 710px;
+    top: 615px;
     left: 48%;
 }
 
 #decoracao-home-5{
-    position: absolute;
-    top: 650px;
+    top: 555px;
     left: 53%;
 }
 
 #decoracao-home-6{
-    position: absolute;
-    top: 230px;
+    top: 135px;
     left: 92%;
 }
 
 #decoracao-home-7{
-    position: absolute;
-    top: 280px;
+    top: 185px;
     left: 93%;
 }
 
 #decoracao-home-8{
-    position: absolute;
-    top: 620px;
+    top: 525px;
     left: 94%;
 }
 
 #decoracao-home-9{
-    position: absolute;
-    top: 700px;
+    top: 605px;
     left: 92%;
 }
 
@@ -481,12 +475,12 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     #circulado{
-        top: 214px;
+        top: 150px;
         left: 104px;
     }
     
     #sublinhado-home{
-        top: 204px;
+        top: 140px;
         left: 50px;
     }
 
@@ -495,56 +489,47 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     #decoracao-home-1{
-        position: absolute;
-        top: 100px;
+        top: 36px;
         left: 3%;
     }
     
     #decoracao-home-2{
-        position: absolute;
-        top: 410px;
+        top: 346px;
         left: 3%;
     }
     
     #decoracao-home-3{
-        position: absolute;
-        top: 90px;
+        top: 26px;
         left: 50%;
     }
     
     #decoracao-home-4{
-        position: absolute;
-        top: 382px;
+        top: 318px;
         left: 48%;
     }
     
     #decoracao-home-5{
-        position: absolute;
-        top: 322px;
+        top: 258px;
         left: 53%;
     }
     
     #decoracao-home-6{
-        position: absolute;
-        top: 95px;
+        top: 31px;
         left: 93%;
     }
     
     #decoracao-home-7{
-        position: absolute;
-        top: 140px;
+        top: 76px;
         left: 93%;
     }
     
     #decoracao-home-8{
-        position: absolute;
-        top: 292px;
+        top: 228px;
         left: 94%;
     }
     
     #decoracao-home-9{
-        position: absolute;
-        top: 372px;
+        top: 308px;
         left: 92%;
     }
 }
@@ -616,12 +601,12 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     #circulado{
-        top: 214px;
+        top: 150px;
         left: 80px;
     }
     
     #sublinhado-home{
-        top: 203px;
+        top: 139px;
         left: 25px;
     }
 
@@ -630,38 +615,32 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     #decoracao-home-1{
-        position: absolute;
-        top: 100px;
+        top: 36px;
         left: 3%;
     }
     
     #decoracao-home-2{
-        position: absolute;
-        top: 410px;
+        top: 346px;
         left: 3%;
     }
     
     #decoracao-home-3{
-        position: absolute;
-        top: 90px;
+        top: 26px;
         left: 90%;
     }
     
     #decoracao-home-4{
-        position: absolute;
-        top: 382px;
+        top: 318px;
         left: 90%;
     }
     
     #decoracao-home-5{
-        position: absolute;
-        top: 260px;
+        top: 196px;
         left: 1%;
     }
     
     #decoracao-home-6{
-        position: absolute;
-        top: 200px;
+        top: 136px;
         left: 93%;
     }
     

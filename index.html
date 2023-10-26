@@ -37,7 +37,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <a href="javascript:void(0);" id="icon" onclick="myFunction()">
                         <img src="images/hamburger_menu.svg">
                     </a>
                 </div>
@@ -109,13 +109,70 @@
             </div>
         </section>
         <section id="como_usar">
-            <div>
+            <div class="titulo">
                 <h2>Como o Software Funciona</h2>
+                <p>Professor Estrutural funciona perfeitamente de acordo com suas necessidades e é fácil de instalar e <br> registrar. Comece a realizar cálculos assim que baixar no computador!</p>
+            </div>
+            <div class="conteudo">
+                <div id="tela">
+                    <picture>
+                        <source>
+                        <img src="images/computador_como_utilizar.svg">
+                    </picture>
+                </div>
+                <div class="sistema_topicos side-by-side">
+                    <div class="botao_passa_topico">
+
+                    </div>
+                    <div id="div_topicos_como_usar">
+                        <ul>
+                            <div class="nivel">
+                                <div class="div_topico esq cima" id="topico_1">
+                                    <picture>
+                                        <source media="(max-width: 1270px)" srcset="">
+                                        <img class="icones_topico" src="images/calculos_topico.svg">
+                                    </picture>
+                                    <li class="topico">Cálculos</li>
+                                    <p class="texto_topicos">Garantia de cálculos <br>estruturais precisos e <br>confiáveis.</p>
+                                </div>
+                                <div class="div_topico dir cima" id="topico_2">
+                                    <picture>
+                                        <source media="(max-width: 1270px)" srcset="">
+                                        <img class="icones_topico" src="images/interface_topico.svg">
+                                    </picture>
+                                    <li class="topico">Interface</li>
+                                    <p class="texto_topicos">Facilidade de uso com uma <br>interface amigável e <br>simplificada.</p>
+                                </div>
+                            </div>
+                            <div class="nivel"> 
+                                <div class="div_topico esq" id="topico_3">
+                                    <picture>
+                                        <source media="(max-width: 1270px)" srcset="">
+                                        <img class="icones_topico" src="images/graficos_topico.svg">
+                                    </picture>
+                                    <li class="topico">Gráficos</li>
+                                    <p class="texto_topicos">Representações visuais para <br>uma compreensão <br>instantânea das análises.</p>
+                                </div>
+                                <div class="div_topico dir" id="topico_4">
+                                    <picture>
+                                        <source media="(max-width: 1270px)" srcset="">
+                                        <img class="icones_topico" src="images/tabelas_topico.svg">
+                                    </picture>
+                                    <li class="topico">Tabelas</li>
+                                    <p class="texto_topicos">Tabelas descritivas sobre o <br>comportamento da viga em <br>cada seção.</p>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="botao_passa_topico">
+
+                    </div>
+                </div>
             </div>
         </section>
         <section id="recursos">
-            <div>
-                <h2>Podemos oferecer as melhores facilidades para você!</h2>
+            <div class="titulo">
+                <h2>Podemos oferecer as melhores <br>facilidades para você!</h2>
             </div>
         </section>
         <section id="numeros_avaliacoes">
@@ -144,11 +201,15 @@
         <script>
             function myFunction() {
                 var x = document.getElementById("myNav");
-                if(x.style.right === '-200px' ) {
-                    x.style.right = '0';
-                } else {
-                    x.style.right = '-200px'; 
+                var y = document.getElementById("icon");
+                if(y.style.display.valueOf === 'none'){
+                    if(x.style.right === '-200px') {
+                        x.style.right = '0';
+                    } else {
+                        x.style.right = '-200px'; 
+                    }
                 }
+                console.log("display^::" + (x.style.right));
             }
         </script>
     </body>

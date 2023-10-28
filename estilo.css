@@ -444,10 +444,11 @@ section#home div#home-div div.side-by-side a:first-child{
     left: 0;
     height: 120px;
     width: 100%;
+    display: none;
 }
 
 .botao_passa_topico{
-    background-color: pink;
+/*     background-color: pink; */
     width: 8%;
     height: 100%;
 }    
@@ -929,7 +930,7 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     .esq{
-        margin-right: 15px;
+        margin-right: 0;
     }
 
     .quebra_tela_grande{
@@ -950,7 +951,7 @@ section#home div#home-div div.side-by-side a:first-child{
 
     .nivel{
 /*         display: flex; */
-        width: 384px;
+        width: 334px;
         float: left;
     }
 
@@ -960,7 +961,7 @@ section#home div#home-div div.side-by-side a:first-child{
         height: 150px;
         left: 8%;
         top: 380px;/*380*/
-        margin-left: -180px;
+        margin-left: 0px;/*-165*/
 
         transition: margin-left 0.3s;
     
@@ -987,6 +988,6 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     .sistema_topicos{
-/*         display: none; */
+        display: flex;
     }
 }

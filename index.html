@@ -213,13 +213,13 @@
             function myFunction() {
                 var x = document.getElementById("myNav");
                 var y = document.getElementById("icon");
-                if(y.style.display.valueOf === 'none'){
+/*                 if(y.style.display.valueOf === 'none'){ */
                     if(x.style.right === '-200px') {
                         x.style.right = '0';
                     } else {
                         x.style.right = '-200px'; 
                     }
-                }
+/*                 } */
                 console.log("display^::" + (x.style.right));
             }
 
@@ -228,7 +228,7 @@
 
                 var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
 
-                y.style.marginLeft = ((x - 180) + "px")
+                y.style.marginLeft = ((x - 165) + "px")
 
                 console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
             }
@@ -238,7 +238,7 @@
 
                 var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
 
-                y.style.marginLeft = ((x + 180) + "px")
+                y.style.marginLeft = ((x + 165) + "px")
 
                 console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
             }

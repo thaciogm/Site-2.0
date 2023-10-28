@@ -379,11 +379,12 @@ section#home div#home-div div.side-by-side a:first-child{
     align-items: center;
     height: 100%;
     width: 100%;
+/*     overflow: hidden; */
 }
 
 .titulo{
     height: auto;
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;

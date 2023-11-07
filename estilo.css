@@ -43,14 +43,14 @@ body{
 
 header{
     height: 95px;
-    background-color: #ECF9FF;
+/*     background-color: #ECF9FF; */
 }
 
 .header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ECF9FF;
+    background: linear-gradient(#ECF9FF, #ECF9FF, #ECF9FF, #ECF9FF, rgb(255,255,255,0));
     height: 95px;
     width: 100%;
     display: flex;/*coloca itens lado a lado*/
@@ -394,7 +394,8 @@ section#home div#home-div div.side-by-side a:first-child{
 .titulo > *{
     justify-content: center;
     text-align: center;
-    padding: 13px;
+    padding-top: 13px;
+    padding-bottom: 13px;
 }
 
 .titulo p{
@@ -625,6 +626,7 @@ section#home div#home-div div.side-by-side a:first-child{
     
     p{
         font-size: 12px;
+        line-height: 18px;
     }
 
     .btn-claro{
@@ -810,19 +812,21 @@ section#home div#home-div div.side-by-side a:first-child{
     /* 320 - 760 - 960 */
     .header #icon {
         display: block;
+        z-index: 100;
     }
 
     #myNav{
 /*         display: none; */
         padding-left: 15px;
         position: absolute;
-        z-index: 100;
-        background: linear-gradient(#ECF9FF, #ECF9FF, white, white, white);
+        z-index: 99;
+        background: linear-gradient(#ECF9FF, #ECF9FF, rgb(255,255,255,0), rgb(255,255,255,0), rgb(255,255,255,0));
         width: 200px;
         height: calc(100vh - 64px);
-        top: 64px;
+        top: 0px;
         right: -200px;
         transition: right 0.3s;
+        padding-top: 64px;
     }
 
     .menu ul{

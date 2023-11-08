@@ -50,7 +50,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background: linear-gradient(#ECF9FF, #ECF9FF, #ECF9FF, #ECF9FF, rgb(255,255,255,0));
+    background: #ECF9FF;
     height: 95px;
     width: 100%;
     display: flex;/*coloca itens lado a lado*/
@@ -173,7 +173,7 @@ a:link, a:visited, a:hover, a:active{
 }
 
 section{
-    background-color: white;
+    background-color: #FFFFFF;
     height: 1000px;
     width: 100%;
     z-index: -5;
@@ -182,7 +182,7 @@ section{
 
 #home{
 /*     background-color: #ECF9FF; */
-    background: linear-gradient(#ECF9FF, #ECF9FF, #ECF9FF, white);
+    background: linear-gradient(#ECF9FF, #ECF9FF, #ECF9FF, #FFFFFF);
     height: 850px;/* 866 altura do cabeçalho da segunda section até menu nav */
     width: 100%;
     position: relative;
@@ -267,6 +267,14 @@ h2{
     color: #373536;
     font-family: QuicksandBold;
     font-size: 43.9px;
+    z-index: 1;
+}
+
+h3{
+    margin: 0px;
+    color: #5E5E5E;
+    font-family: InterBold;
+    font-size: 18px;
     z-index: 1;
 }
 
@@ -388,7 +396,7 @@ section#home div#home-div div.side-by-side a:first-child{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 13px 86px 13px 86px;
+/*     padding: 13px 86px 13px 86px; */
 }
 
 .titulo > *{
@@ -401,6 +409,8 @@ section#home div#home-div div.side-by-side a:first-child{
 .titulo p{
     font-size: 16px;
     line-height: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .conteudo{
@@ -504,11 +514,60 @@ section#home div#home-div div.side-by-side a:first-child{
 
 #recursos{
     background-color: #ECF9FF;
-
+    height: 1138px;
 }
 
 .quebra_tela_grande{
     display: static;
+}
+
+#recursos .titulo >* {
+    padding-top: 82px;
+    padding-bottom: 82px;
+}
+
+#recursos .conteudo {
+/*     background: #01BAFF;
+/*     flex: 1; */
+}
+
+#recursos .div_topico{
+    background: #FFFFFF;
+    width: 370px;
+    height: 234px;
+    padding: 33px;
+    margin: 22.5px;/*22.5px*/
+    border-radius: 6px;
+}
+
+#recursos .div_topico >* {
+}
+
+.topicos_recursos{
+    display: flex;
+/*     flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+}
+
+.topicos_recursos ul{
+    width: 1260px;
+}
+
+#numeros_avaliacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#numeros_avaliacoes .titulo{
+    width: 959px;
+    top: -150px;
+    position: relative;
+    border-radius: 6px;
+    background: #FFFFFF;
+    padding-top: 44px;
 }
 
 /* .nivel {
@@ -617,7 +676,11 @@ section#home div#home-div div.side-by-side a:first-child{
     }
     
     h2{
-        font-size: 26px;
+        font-size: 25px;
+    }
+
+    h3{
+        font-size: 16px;
     }
     
     h4{
@@ -805,6 +868,28 @@ section#home div#home-div div.side-by-side a:first-child{
         justify-content: center; */
     /*     vertical-align: middle; */
     }
+
+    #recursos .titulo >* {
+        padding-top: 63px;/*63px*/
+        padding-bottom: 30px;
+    }
+
+    #recursos {
+        height: 718px;
+    }
+
+    #recursos .div_topico{
+        background: #FFFFFF;
+        width: 194px;
+        height: 165px;
+        padding: 8px;
+        margin: 4px;/*22.5px*/
+        text-align: left;
+    }
+
+    .topicos_recursos ul{
+        width: 620px;
+    }
 }
 
 
@@ -820,13 +905,13 @@ section#home div#home-div div.side-by-side a:first-child{
         padding-left: 15px;
         position: absolute;
         z-index: 99;
-        background: linear-gradient(#ECF9FF, #ECF9FF, rgb(255,255,255,0), rgb(255,255,255,0), rgb(255,255,255,0));
+        background: #ECF9FF;
         width: 200px;
         height: calc(100vh - 64px);
-        top: 0px;
+        top: 64px;
         right: -200px;
         transition: right 0.3s;
-        padding-top: 64px;
+        padding-top: 0px;
     }
 
     .menu ul{
@@ -984,7 +1069,7 @@ section#home div#home-div div.side-by-side a:first-child{
 
         align-items: center;
         justify-content: center;
-        background-color: white;
+        background-color: #FFFFFF;
     }
 
     .titulo{
@@ -993,5 +1078,18 @@ section#home div#home-div div.side-by-side a:first-child{
 
     .sistema_topicos{
         display: flex;
+    }
+
+    .topicos_recursos ul{
+        width: 410px;
+    }
+
+    #numeros_avaliacoes .titulo{
+        width: 100%;
+        top: 0px;
+        position: relative;
+        border-radius: 6px;
+        background: #FFFFFF;
+        padding-top: 44px;
     }
 }

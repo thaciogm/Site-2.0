@@ -4,6 +4,11 @@
 }
 
 @font-face {
+    font-family: Rubik;
+    src: url(fonts/Rubik-Regular.ttf);
+}
+
+@font-face {
     font-family: InterBold;
     src: url(fonts/Inter-Bold.ttf);
 }
@@ -290,10 +295,20 @@ h4{
 p{
     margin: 0px;
     color: #373536;
-    font-family: InterRegular;
+    font-family: Rubik;
     font-size: 18px;
     z-index: 1;
-    line-height: 28px;
+    line-height: normal;
+}
+
+#home p{
+    margin: 0px;
+    font-family: InterRegular;
+    z-index: 1;
+    color: var(--Gray, #373536);
+    font-size: 18px;
+    line-height: 26.284px; /* 26.284px */
+    margin-bottom: 30px;
 }
 
 .btn{
@@ -451,20 +466,23 @@ section#home div#home-div div.side-by-side a:first-child{
 
 .sistema_topicos{
     position: absolute;
-    top: 370px;
-    left: 0;
+    left: 0px;
     height: 120px;
     width: 100%;
     display: none;
 }
 
-.botao_passa_topico{
+#como_usar .sistema_topicos{
+    top: 370px;
+}
+
+#como_usar .botao_passa_topico{
 /*     background-color: pink; */
     width: 8%;
     height: 100%;
 }    
 
-.div_vizualizacao_topicos{
+#como_usar .div_vizualizacao_topicos{
 /*     background-color: blue; */
     width: 84%;
     height: 100%;
@@ -496,9 +514,19 @@ section#home div#home-div div.side-by-side a:first-child{
     padding: 7px;
 }
 
-.texto_topicos{
+#como_usar .texto_topicos{
     font-size: 14px;
-    line-height: 19px;
+    line-height: normal;
+}
+
+#recursos .texto_topicos{
+    font-size: 16px;
+    line-height: normal;
+}
+
+#recursos .icones_topico{
+    height: 65px;
+    width: 65px;
 }
 
 .esq {
@@ -521,6 +549,10 @@ section#home div#home-div div.side-by-side a:first-child{
     display: static;
 }
 
+.quebra_tela_pequena{
+    display: none;
+}
+
 #recursos .titulo >* {
     padding-top: 82px;
     padding-bottom: 82px;
@@ -535,7 +567,7 @@ section#home div#home-div div.side-by-side a:first-child{
     background: #FFFFFF;
     width: 370px;
     height: 234px;
-    padding: 33px;
+    padding: 24px;
     margin: 22.5px;/*22.5px*/
     border-radius: 6px;
 }
@@ -554,20 +586,76 @@ section#home div#home-div div.side-by-side a:first-child{
     width: 1260px;
 }
 
-#numeros_avaliacoes{
+#section_numeros{
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    height: 508px;
+/*     overflow: hidden; */
 }
 
-#numeros_avaliacoes .titulo{
+#section_numeros .titulo{
     width: 959px;
     top: -150px;
     position: relative;
     border-radius: 6px;
     background: #FFFFFF;
     padding-top: 44px;
+}
+
+#section_numeros .conteudo{
+/*     height: 202px; */
+    top: -66px; 
+    position: relative;
+/*     overflow: hidden; */
+}
+
+#section_numeros .botao_passa_topico{
+/*     background-color: pink; */
+    width: 25%;
+    height: 100%;
+}    
+    
+#section_numeros .div_vizualizacao_topicos{
+/*     background-color: blue; */
+    width: 50%;
+    height: 100%;
+}
+
+#numeros{
+    display: flex;
+/*     overflow: hidden; */
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 71.5px;
+    margin-right: 71.5px;
+    width: 270px;
+    height: 200px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    border: 1.3px solid var(--Principal-Blue, #01BAFF);
+}
+
+.card >*{
+/*     margin-left: 71.5px;
+    margin-right: 71.5px; */
+    padding: 6px;
+}
+
+.card p{
+    color: var(--Gray, #373536);
+    text-align: center;
+    /* Mono H3 */
+    font-family: Rubik;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 /* .nivel {
@@ -689,7 +777,28 @@ section#home div#home-div div.side-by-side a:first-child{
     
     p{
         font-size: 12px;
-        line-height: 18px;
+        line-height: normal;
+    }
+
+    #home p{
+        font-size: 12px;
+        line-height: 17.523px; /* 26.284px */
+        margin-bottom: 20px;
+    }
+
+    #como_usar .texto_topicos{
+        font-size: 11.5px;
+        line-height: normal;
+    }
+    
+    #recursos .texto_topicos{
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    #recursos .icones_topico{
+        height: 33px;
+        width: 33px;
     }
 
     .btn-claro{
@@ -890,6 +999,39 @@ section#home div#home-div div.side-by-side a:first-child{
     .topicos_recursos ul{
         width: 620px;
     }
+
+    #section_numeros{
+        height: 433px;
+    }
+
+    #section_numeros .titulo{
+        width: 700px;
+        top: -130px;
+        position: relative;
+        border-radius: 6px;
+        background: #FFFFFF;
+        padding-top: 44px;
+    }
+
+    #section_numeros .conteudo{
+        /*     height: 202px; */
+        top: -95px; 
+    }
+
+    .card{
+        width: 185px;
+        height: 105px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .card >*{
+        padding: 1px;
+    }
+    
+    .card p{
+        font-size: 12px;
+    }
 }
 
 
@@ -1084,12 +1226,35 @@ section#home div#home-div div.side-by-side a:first-child{
         width: 410px;
     }
 
-    #numeros_avaliacoes .titulo{
+    #section_numeros .titulo{
         width: 100%;
         top: 0px;
         position: relative;
         border-radius: 6px;
         background: #FFFFFF;
         padding-top: 44px;
+    }
+
+    .quebra_tela_pequena{
+        display: flex;
+    }
+
+    #section_numeros .conteudo{
+        /*     height: 202px; */
+        top: 15px; 
+    }
+
+    #numeros{
+        width: 860px;
+        transition: margin-left 0.3s;
+            
+        /*         background-color: green; */
+
+/*                 display: inline-block; */
+/*         overflow: hidden; */
+        /*         flex-direction: column; */
+        /*         align-items: center;
+                justify-content: center; */
+            /*     vertical-align: middle; */
     }
 }

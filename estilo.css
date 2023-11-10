@@ -612,13 +612,13 @@ section#home div#home-div div.side-by-side a:first-child{
 
 #section_numeros .botao_passa_topico{
 /*     background-color: pink; */
-    width: 25%;
+    width: 26%;
     height: 100%;
 }    
     
 #section_numeros .div_vizualizacao_topicos{
 /*     background-color: blue; */
-    width: 50%;
+    width: 48%;
     height: 100%;
 }
 
@@ -1153,7 +1153,7 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     #como_usar{
-        height: 760px;
+        height: 650px;
     }
 
     #tela{
@@ -1247,7 +1247,7 @@ section#home div#home-div div.side-by-side a:first-child{
     #numeros{
         width: 860px;
         transition: margin-left 0.3s;
-            
+        margin-left: 570px;
         /*         background-color: green; */
 
 /*                 display: inline-block; */

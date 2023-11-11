@@ -28,6 +28,11 @@
     src: url(fonts/Quicksand-Bold.ttf);
 }
 
+@font-face {
+    font-family: Quicksand;
+    src: url(fonts/Quicksand-Regular.ttf);
+}
+
 html{
     scroll-behavior: smooth;
  }
@@ -42,7 +47,7 @@ body{
     border: 0px;
     background-color: #ECF9FF;
 /*     padding-top: 95px; */
-    z-index: -10;
+/*     z-index: -10; */
     overflow-x: hidden;
 }
 
@@ -160,19 +165,16 @@ a:link, a:visited, a:hover, a:active{
 }
 
 #btn-login-cab{
-/*     padding-top: 14px; */
     height: 53px;
     width: 119px;
 }
 
 #btn-cadastro-cab{
-/*     padding-top: 14px; */
     height: 53px;
     width: 225px;
 }
 
 .btn-home{
-/*     padding-top: 14px; */
     height: 53px;
     width: 225px;
 }
@@ -181,29 +183,24 @@ section{
     background-color: #FFFFFF;
     height: 1000px;
     width: 100%;
-    z-index: -5;
-/*     border: 2px solid black; */
 }
 
 #home{
-/*     background-color: #ECF9FF; */
     background: linear-gradient(#ECF9FF, #ECF9FF, #ECF9FF, #FFFFFF);
     height: 850px;/* 866 altura do cabeçalho da segunda section até menu nav */
     width: 100%;
     position: relative;
-/*     z-index: 1; */
 }
 
 #home-div-parent{
     width: 100%;
     height: 100%;
-/*     position: relative; */
 }
 
 #home-div {
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
 }
 
@@ -211,26 +208,20 @@ section{
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    z-index: 1;
 }
 
 #home-div-child {
-/*     padding-top: 156px; */
     padding-left: 114px;
     width: 60%;
     height: 100%;
-/*     vertical-align: middle;
-    align-items: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
-/*     align-items: center; */
-    z-index: 1;
 }
 
 #div-imagem-apresentacao{
     padding-right: 5%;
-/*     padding-top: 44px; */
     width: 40%;
     height: 100%;
 
@@ -250,7 +241,6 @@ section{
 #home-div-child > * {
     display: block;
     margin-bottom: 30px;
-/*     margin-left: 14%; */
     z-index: 1;
 }
 
@@ -264,7 +254,6 @@ h1{
     font-family: QuicksandBold;
     font-size: 60px;
     line-height: 53px;
-    z-index: 1;
 }
 
 h2{
@@ -272,7 +261,6 @@ h2{
     color: #373536;
     font-family: QuicksandBold;
     font-size: 43.9px;
-    z-index: 1;
 }
 
 h3{
@@ -280,7 +268,6 @@ h3{
     color: #5E5E5E;
     font-family: InterBold;
     font-size: 18px;
-    z-index: 1;
 }
 
 h4{
@@ -289,7 +276,6 @@ h4{
     font-family: InterMedium;
     font-style: normal;
     font-size: 16px;
-    z-index: 1;
 }
 
 p{
@@ -297,14 +283,12 @@ p{
     color: #373536;
     font-family: Rubik;
     font-size: 18px;
-    z-index: 1;
     line-height: normal;
 }
 
 #home p{
     margin: 0px;
     font-family: InterRegular;
-    z-index: 1;
     color: var(--Gray, #373536);
     font-size: 18px;
     line-height: 26.284px; /* 26.284px */
@@ -317,7 +301,7 @@ p{
 
 .side-by-side{
     display: inline-flex;
-    z-index: 1;
+/*     z-index: 1; */
 }
 
 section#home div#home-div div.side-by-side a:first-child{
@@ -657,6 +641,290 @@ section#home div#home-div div.side-by-side a:first-child{
     font-weight: 400;
     line-height: normal;
 }
+
+#avaliacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1520px;
+/*     overflow: hidden; */
+}
+
+#avaliacoes .titulo >*{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#avaliacoes .conteudo >*{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+div.text_field_cadastrar {
+    display: flex;
+    align-items: center;
+}
+
+.text_field_cadastrar{
+    width: 606px;
+    height: 63px;
+    border-radius: 6px;
+    border: 1px solid var(--Principal-Blue, #01BAFF);
+    background: var(--Light-Blue, #ECF9FF);
+}
+
+.text_field_cadastrar form{
+    display: flex;
+    align-items: center;
+}
+
+.input_cadastrar{
+    width: 372px;
+    height: 60px;
+    border: 0px;
+    background: none;
+
+    font-family: Quicksand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 37px;
+    
+/*     background: var(--Light-Blue, #ECF9FF); */
+}
+
+input:focus{
+    outline: none;
+}
+
+input.input_cadastrar::placeholder{
+    color: rgba(94,94,94,0.5) !important;
+}
+
+#planos{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    height: 502px;
+    background-color: #ECF9FF;
+}
+
+#planos .titulo{
+    position: relative;
+    top: -510px;
+}
+
+#planos .conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -473px;/*-510px + 37px = 473px*/
+    height: 690px;
+}
+
+#planos .cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#planos .cards >*{
+    margin-left: 44px;
+    margin-right: 44px;
+}
+
+#duvidas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1285px;
+    background-color: #ECF9FF;
+}
+
+.card_plano{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.card1{
+    padding-top: 20px;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.card2{
+    padding-top: 30px;
+    padding-left: 39px;
+    padding-right: 39px;
+}
+
+.card_plano ul{
+    width: 100%;
+}
+
+.card_plano li p{
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 318%; /* 50.88px */
+}
+
+.card_plano li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card_plano .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.card_plano .btn span{
+    color: #FFF;
+    font-family: InterBold;
+    font-size: 24px;
+    font-style: normal;
+/*     font-weight: 700; */
+    line-height: normal;
+    
+}
+
+.card1>*{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card2>*{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.card2 .btn span{
+    color: #FFF;
+}
+
+.card1 .btn span{
+    color: var(--Principal-Blue, #01BAFF);
+}
+
+.card_plano .btn_plano_basico{
+    width: 265.229px;
+    height: 68.925px;
+    border: 1px solid var(--Principal-Blue, #01BAFF);
+}
+
+.card_plano .btn_plano_super{
+    width: 304px;
+    height: 79px;
+    border: 1px solid var(--Light-Blue, #ECF9FF);
+}
+
+.card_plano li picture{
+    padding-right: 13px;
+}
+
+.card_plano li picture{
+    height: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_plano .imagem_plano{
+    padding-bottom: 10px;
+}
+
+.card1{
+    width: 344.623px;
+    height: 602px;
+    border: 0.5px solid rgba(1, 186, 255, 0.50);
+    background: #FFF;
+}
+
+.card2 p,
+.card2 h2{
+    color: var(--Light-Blue, #ECF9FF);
+}
+
+.card2 h2{
+    padding-top: 0px;
+    font-size: 48px;
+}
+
+.card1 h2{
+    padding-top: 0px;
+}
+
+.ou{
+    height: 210px;
+}
+
+.ou h2{
+    color: var(--Principal-Blue, #01BAFF);
+    text-align: center;
+    /* Handwrite H5 */
+    font-family: QuicksandBold;
+    font-size: 43.9px;
+    font-style: normal;
+/*     font-weight: 700; */
+    line-height: normal;
+}
+
+.molde_card_plano{
+    width: 395px;
+    height: 690px;
+    position: relative;
+}
+
+.card2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid rgba(1, 186, 255, 0.50);
+    background: var(--Gradiente, linear-gradient(127deg, #2982C0 9.53%, #01BAFF 101.2%));
+}
+
+.melhor_escolha{
+    position: absolute;
+    width: 100%;
+    height: 30%;
+/*     background-color: #01BAFF; */
+    z-index: 100;
+    position: relative;
+}
+
+.melhor_escolha picture{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.melhor_escolha .diagonal{
+    transform: rotate(45.146deg);
+    position: absolute;
+    top: 28px;
+    right: 0px;
+    color: var(--Gray, #373536);
+    font-family: Quicksand;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card1 li p{
+    color: var(--Gray, #373536);
+}
+
 
 /* .nivel {
     background-color: yellow;
@@ -1001,7 +1269,7 @@ section#home div#home-div div.side-by-side a:first-child{
     }
 
     #section_numeros{
-        height: 433px;
+        height: 320px;
     }
 
     #section_numeros .titulo{
@@ -1031,6 +1299,29 @@ section#home div#home-div div.side-by-side a:first-child{
     
     .card p{
         font-size: 12px;
+    }
+
+    .text_field_cadastrar{
+        width: 454px;
+        height: 50px;
+    }
+    
+    .input_cadastrar{
+        width: 286px;
+        height: 47px;
+        font-family: Quicksand;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+
+    #avaliacoes .titulo >*{
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    
+    #avaliacoes .conteudo >*{
+        margin-top: 16px;
+        margin-bottom: 25px;
     }
 }
 
@@ -1256,5 +1547,57 @@ section#home div#home-div div.side-by-side a:first-child{
         /*         align-items: center;
                 justify-content: center; */
             /*     vertical-align: middle; */
+    }
+
+    #section_numeros{
+        height: 433px;
+    }
+
+    .text_field_cadastrar{
+        width: 368px;
+        height: 39px;
+        border-radius: 6px;
+        border: 1px solid var(--Principal-Blue, #01BAFF);
+        background: var(--Light-Blue, #ECF9FF);
+            opacity: 1;
+/*         color: rgba(188, 188, 188, 1); */
+        color: rgb(255, 0, 0);
+
+        font-family: Quicksand;
+    
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        padding-left: 21px;
+
+    }
+
+    .text_field_cadastrar form >*{
+        margin-bottom: 12px;
+    }
+
+    .text_field_cadastrar #btn-cadastro-cab{
+        width: 368px;
+        height: 39px;
+    }
+
+    .text_field_cadastrar #btn-cadastro-cab img{
+        margin-right: 10px;
+    }
+    
+    .text_field_cadastrar form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .div_cadastrar{
+        padding-left: 0px;
+        width: 370px;
+        height: 100px;
+        border: 0px;
+        background: none;
+    /*     background: var(--Light-Blue, #ECF9FF); */
     }
 }

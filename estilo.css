@@ -296,7 +296,7 @@ p{
 }
 
 .btn{
-    z-index: 1;
+/*     z-index: 1; */
 }
 
 .side-by-side{
@@ -725,24 +725,16 @@ input.input_cadastrar::placeholder{
     height: 690px;
 }
 
-#planos .cards{
+#planos #cards{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#planos .cards >*{
+#planos #cards >*{
     margin-left: 44px;
     margin-right: 44px;
-}
-
-#duvidas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 1285px;
-    background-color: #ECF9FF;
 }
 
 .card_plano{
@@ -753,101 +745,39 @@ input.input_cadastrar::placeholder{
 }
 
 .card1{
+    width: 344.623px;
+    height: 602px;
+    border: 0.5px solid rgba(1, 186, 255, 0.50);
+    background: #FFF;
+
     padding-top: 20px;
     padding-left: 36px;
     padding-right: 36px;
 }
 
+.molde_card_plano{
+    width: 395px;
+    height: 690px;
+    position: relative;
+}
+
 .card2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid rgba(1, 186, 255, 0.50);
+    background: var(--Gradiente, linear-gradient(127deg, #2982C0 9.53%, #01BAFF 101.2%));
     padding-top: 30px;
     padding-left: 39px;
     padding-right: 39px;
-}
-
-.card_plano ul{
-    width: 100%;
-}
-
-.card_plano li p{
-    font-family: Rubik;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 318%; /* 50.88px */
-}
-
-.card_plano li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.card_plano .btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-}
-
-.card_plano .btn span{
-    color: #FFF;
-    font-family: InterBold;
-    font-size: 24px;
-    font-style: normal;
-/*     font-weight: 700; */
-    line-height: normal;
-    
-}
-
-.card1>*{
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.card2>*{
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.card2 .btn span{
-    color: #FFF;
-}
-
-.card1 .btn span{
-    color: var(--Principal-Blue, #01BAFF);
-}
-
-.card_plano .btn_plano_basico{
-    width: 265.229px;
-    height: 68.925px;
-    border: 1px solid var(--Principal-Blue, #01BAFF);
-}
-
-.card_plano .btn_plano_super{
-    width: 304px;
-    height: 79px;
-    border: 1px solid var(--Light-Blue, #ECF9FF);
-}
-
-.card_plano li picture{
-    padding-right: 13px;
-}
-
-.card_plano li picture{
-    height: 14px;
-    align-items: center;
-    justify-content: center;
 }
 
 .card_plano .imagem_plano{
     padding-bottom: 10px;
 }
 
-.card1{
-    width: 344.623px;
-    height: 602px;
-    border: 0.5px solid rgba(1, 186, 255, 0.50);
-    background: #FFF;
+.card1 p{
+    color: var(--Gray, #373536);
 }
 
 .card2 p,
@@ -864,33 +794,82 @@ input.input_cadastrar::placeholder{
     padding-top: 0px;
 }
 
+.card_plano .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.card_plano .btn span{
+    font-family: InterBold;
+    font-size: 24px;
+    font-style: normal;
+/*     font-weight: 700; */
+    line-height: normal;
+    
+}
+.card1 .btn span{
+    color: var(--Principal-Blue, #01BAFF);
+}
+
+.card2 .btn span{
+    color: #FFF;
+}
+
+.card_plano .btn_plano_basico{
+    width: 265.229px;
+    height: 68.925px;
+    border: 1px solid var(--Principal-Blue, #01BAFF);
+}
+
+.card_plano .btn_plano_super{
+    width: 304px;
+    height: 79px;
+    border: 1px solid var(--Light-Blue, #ECF9FF);
+}
+
+.card_plano ul{
+    width: 100%;
+}
+
+.card_plano li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.card_plano li picture{
+    height: 14px;
+    align-items: center;
+    justify-content: center;
+    padding-right: 13px;
+}
+
+.card_plano li p{
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 318%; /* 50.88px */
+}
+
+.card1>*{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.card2>*{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .ou{
     height: 210px;
 }
 
 .ou h2{
     color: var(--Principal-Blue, #01BAFF);
-    text-align: center;
-    /* Handwrite H5 */
-    font-family: QuicksandBold;
-    font-size: 43.9px;
-    font-style: normal;
-/*     font-weight: 700; */
-    line-height: normal;
-}
-
-.molde_card_plano{
-    width: 395px;
-    height: 690px;
-    position: relative;
-}
-
-.card2{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border: 0.5px solid rgba(1, 186, 255, 0.50);
-    background: var(--Gradiente, linear-gradient(127deg, #2982C0 9.53%, #01BAFF 101.2%));
 }
 
 .melhor_escolha{
@@ -921,8 +900,28 @@ input.input_cadastrar::placeholder{
     line-height: normal;
 }
 
-.card1 li p{
-    color: var(--Gray, #373536);
+#planos .sistema_topicos{
+/*     top: 370px; */
+}
+
+#planos .botao_passa_topico{
+/*     background-color: pink; */
+    width: 10%;
+    height: 85px;
+}    
+
+#planos .div_vizualizacao_topicos{
+/*     background-color: blue; */
+    width: 80%;
+    height: 85px;
+}
+
+#duvidas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1285px;
+    background-color: #ECF9FF;
 }
 
 
@@ -1323,6 +1322,113 @@ input.input_cadastrar::placeholder{
         margin-top: 16px;
         margin-bottom: 25px;
     }
+
+    #avaliacoes{
+        height: 1050px;
+    }
+
+    #planos{
+        height: 300px;
+    }
+    
+    #planos .titulo{
+        top: -460px;
+    }
+    
+    #planos .conteudo{
+        top: -436px;/*-510px + 37px -13px= -486px*/
+        height: 511px;
+    }
+    
+    .card1{
+        width: 255.154px;
+        height: 445.712px;
+    
+        padding-top: 20px;
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+    
+    .molde_card_plano{
+        width: 292.452px;
+        height: 510.866px;
+    }
+    
+    .card2{
+        padding-top: 30px;
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    
+    .card_plano .imagem_plano{
+        padding-bottom: 10px;
+    }
+    
+    .card_plano p{
+        font-size: 14px;
+    }
+    
+    .card2 h2{
+        font-size: 26px;
+    }
+    
+    .card1 h2{
+        font-size: 24px;
+    }
+    
+    .card_plano .btn span{
+        font-size: 18px;
+    }
+    
+    .card_plano .btn_plano_basico{
+        width: 196.304px;
+        height: 41px;
+    }
+    
+    .card_plano .btn_plano_super{
+        width: 225px;
+        height: 47px;
+    }
+    
+    .card1 li picture{
+        height: 20px;
+        padding-right: 9px;
+    }
+
+    .card2 li picture{
+        height: 15px;
+        padding-right: 9px;
+    }
+    
+    .card_plano li p{
+        font-size: 12px;
+    }
+    
+    .card1>*{
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+    
+    .card2>*{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .ou{
+        height: 110px;
+    }
+    
+    .melhor_escolha picture{
+        top: -1px;
+        right: -1px;
+    }
+    
+    .melhor_escolha .diagonal{
+        top: 21px;
+        right: -1px;
+        font-size:9px;
+    }
+
 }
 
 
@@ -1599,5 +1705,41 @@ input.input_cadastrar::placeholder{
         border: 0px;
         background: none;
     /*     background: var(--Light-Blue, #ECF9FF); */
+    }
+
+    #avaliacoes{
+        height: 1150px;
+    }
+
+    #planos{
+        height: 300px;
+    }
+    
+    #planos .titulo{
+        top: -460px;
+    }
+    
+    #planos .conteudo{
+        top: -436px;/*-510px + 37px -13px= -486px*/
+        height: 511px;
+    }
+
+    #planos #cards >*{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    #cards{
+/*         width: 860px; */
+        transition: margin-left 0.3s;
+        margin-left: -680px;
+        /*         background-color: green; */
+
+/*                 display: inline-block; */
+/*         overflow: hidden; */
+        /*         flex-direction: column; */
+        /*         align-items: center;
+                justify-content: center; */
+            /*     vertical-align: middle; */
     }
 }

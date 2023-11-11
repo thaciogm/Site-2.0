@@ -338,7 +338,7 @@
                 <p>Escolha o melhor método para você.</p>
             </div>
             <div class="conteudo">
-                <div class="cards">
+                <div id="cards">
                     <div class="card_plano card1">
                         <p>Plano Professor</p>
                         <div class="imagem_plano">
@@ -447,7 +447,7 @@
                 </div>
                 <div class="sistema_topicos side-by-side">
                     <div class="botao_passa_topico">
-                        <a onclick="moveNumeroEsquerda()" class="botao_topico" id="btn_esq">
+                        <a onclick="moveCardEsquerda()" class="botao_topico" id="btn_esq">
                             <img src="images/seta_esq_topico.svg">
                         </a>
                     </div>
@@ -455,7 +455,7 @@
 
                     </div>
                     <div class="botao_passa_topico">
-                        <a onclick="moveNumeroDireita()" class="botao_topico" id="btn_dir">
+                        <a onclick="moveCardDireita()" class="botao_topico" id="btn_dir">
                             <img src="images/seta_dir_topico.svg">
                         </a>
                     </div>
@@ -524,6 +524,40 @@
                 var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
 
                 y.style.marginLeft = ((x + 570) + "px")
+
+                console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
+            }
+
+            function moveCardDireita() {
+                var y = document.getElementById("cards");
+
+                var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+
+                y.style.marginLeft = ((x - 680) + "px")
+
+                var delayInMilliseconds = 600; //1 second
+
+                setTimeout(function() {
+                    x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+                    y.style.marginLeft = ((x - 720) + "px")
+                }, delayInMilliseconds);
+
+                console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
+            }
+
+            function moveCardEsquerda() {
+                var y = document.getElementById("cards");
+
+                var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+
+                y.style.marginLeft = ((x + 720) + "px")
+
+                var delayInMilliseconds = 600; //1 second
+
+                setTimeout(function() {
+                    x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+                    y.style.marginLeft = ((x + 680) + "px")
+                }, delayInMilliseconds);
 
                 console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
             }

@@ -466,13 +466,137 @@
             <div class="titulo">
                 <h2>Temos um FAQ para te<br> informar melhor</h2>
             </div>
-        </section>
-        <section id="baixar">
-            <div>
-                <h2>Confie no Professor para ajudar você!</h2>
+            <div class="conteudo">
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>O que é Professor Estrutural e qual o seu propósito?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>O Professor Estrutural é um software de cunho acadêmico que busca auxiliar no aprendizado da  Análise Estrutural. É uma aplicação que ensina o usuário a calcular vigas através dos métodos básicos de análise.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>Quais as vantagens de utilizar o Professor Estrutural?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>Nosso software oferece uma gama de benefícios para melhorar sua experiência, como resultados dinâmicos que se adaptam às suas necessidades; explicação clara e abrangente dos métodos empregados; Representações gráficas para uma compreensão visual; Detalhamentos diversos para informações completas; Interface intuitiva para uma utilização descomplicada.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>Onde o Professor Estrutural pode ser utilizado?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>Está disponível para Windows e Mac OS.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>Por quanto tempo minha licença será válida?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>A licença é vitalícia e você poderá usar a aplicação a qualquer momento.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>Como posso fazer o pagamento da aplicação?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>O pagamento poderá ser feito via pix ou cartão de crédito.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>Existe alguma versão grátis ou período de testes?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>Somente a versão de testes por termo determinado”. Para acesso à aplicação é necessária a compra da licença de acesso.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="nivel_1">
+                        <div class="pergunta">
+                            <h3>Como faço para relatar um problema na utilização?</h3>
+                        </div>
+                        <div class="icone">
+                            <p>RESP.</p>
+                            <a href="#" class="button" onclick="toggleContent(this)">+</a>
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <p>Você poderá enviar um email para contact@professorestrutural.com que prontamente iremos atendê-lo.</p>
+                    </div>
+                </div>
             </div>
         </section>
-
+        <section id="baixar">
+            <div class="fundo_claro">
+            </div>
+            <div class="fundo_escuro">
+            </div>
+            <div class="fundo_branco">
+                <div class="fundo_branco_child">
+                    <div class="titulo">
+                        <h2>Confie no Professor<br class="quebra_tela_grande"> para<br class="quebra_tela_pequena"> ajudar você!</h2>
+                        <p>Adquira agora o Professor Estrutural e transforme complexidade em simplicidade.</p>
+                    </div>
+                    <div class="side-by-side">
+                        <a href="" class="btn btn-claro btn-home"><img class="img-btn" src="images/vector_baixar_btn_claro.svg"><span class="span-btn">Baixar</span></a>
+                        <a href="" class="btn btn-claro btn-home"><img class="img-btn" src="images/vector_cadastro_btn_claro.svg"><span class="span-btn">Cadastrar</span></a>
+                    </div>
+                </div>
+                <div class="fundo_branco_child">
+                    <div class="imagem_tela_app">
+                        <picture>
+                            <source media="(max-width: 1270px)" srcset="images/baixar_apresentacao_app_menor.svg"/>
+                            <img src="images/baixar_apresentacao_app.svg">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <hr class="solid">
+            &copy; 2023 Your Website Name. All rights reserved.
+        </footer>
 
         <script>
             function myFunction() {
@@ -557,6 +681,20 @@
                 }, delayInMilliseconds);
 
                 console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
+            }
+
+            function toggleContent(button) {
+                /* const parentRow = button.parentNode.parentNode; // Move up to the grandparent "row" */
+                const parentRow = button.closest('.row');
+                const respostaDiv = parentRow.lastElementChild; // Access the last child, which is the "resposta" div
+
+                if (respostaDiv.style.display === 'none' || respostaDiv.style.display === '') {
+                    respostaDiv.style.display = 'flex';
+                    button.innerHTML = '-';
+                } else {
+                    respostaDiv.style.display = 'none';
+                    button.innerHTML = '+';
+                }
             }
 
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {

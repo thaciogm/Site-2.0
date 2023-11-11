@@ -4,77 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    .body{
+      position: absolute;
     }
-
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      padding: 10px;
-      color: #fff;
-      z-index: 1000;
-    }
-
-    section {
-        height: 1000px;
-      padding: 20px;
-      border: 1px solid #ddd;
+    .centered-div {
+      position: relative;
+      top: 100px;
+      width: 10%;
+      margin: 0 auto;
+      background-color: lightblue; /* Just for visibility */
+      padding: 20px; /* Just for visibility */
     }
   </style>
-  <title>Menu Fixo</title>
+  <title>Centered Div Example</title>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#section1">Seção 1</a></li>
-        <li><a href="#section2">Seção 2</a></li>
-        <li><a href="#section3">Seção 3</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="section1">
-    <h2>Seção 1</h2>
-    <p>Conteúdo da Seção 1.</p>
-  </section>
-
-  <section id="section2">
-    <h2>Seção 2</h2>
-    <p>Conteúdo da Seção 2.</p>
-  </section>
-
-  <section id="section3">
-    <h2>Seção 3</h2>
-    <p>Conteúdo da Seção 3.</p>
-  </section>
-
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          const headerHeight = document.querySelector('header').offsetHeight;
-          const targetOffset = targetElement.offsetTop - headerHeight;
-
-          window.scrollTo({
-            top: targetOffset,
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-  </script>
+  <div class="centered-div">
+    <!-- Your content goes here -->
+  </div>
 
 </body>
 </html>

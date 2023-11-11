@@ -19,11 +19,11 @@
                 <div class="menu">
                     <nav id="myNav">
                         <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#como_usar">Como usar</a></li>
-                            <li><a href="#titulo_planos">Planos</a></li>
-                            <li><a href="#duvidas">Dúvidas</a></li>
-                            <li><a href="#baixar">Baixar</a></li>
+                            <li><a href="#home" onclick="myFunction()">Home</a></li>
+                            <li><a href="#como_usar" onclick="myFunction()">Como usar</a></li>
+                            <li><a href="#titulo_planos" onclick="myFunction()">Planos</a></li>
+                            <li><a href="#duvidas" onclick="myFunction()">Dúvidas</a></li>
+                            <li><a href="#baixar" onclick="myFunction()">Baixar</a></li>
                             <li class="li-btn">
                                 <a href="" class="btn btn-claro" id="btn-login-cab">
                                     <span class="span-btn">Login</span>
@@ -478,14 +478,11 @@
             function myFunction() {
                 var x = document.getElementById("myNav");
                 var y = document.getElementById("icon");
-/*                 if(y.style.display.valueOf === 'none'){ */
-                    if(x.style.right === '-200px') {
-                        x.style.right = '0';
-                    } else {
-                        x.style.right = '-200px'; 
-                    }
-/*                 } */
-                console.log("display^::" + (x.style.right));
+                if(x.style.right === '-200px') {
+                    x.style.right = '0px';
+                } else {
+                    x.style.right = '-200px'; 
+                }
             }
 
             function moveTopicoDireita() {

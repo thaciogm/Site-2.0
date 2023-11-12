@@ -4,24 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .body{
-      position: absolute;
-    }
-    .centered-div {
-      position: relative;
-      top: 100px;
-      width: 10%;
-      margin: 0 auto;
-      background-color: lightblue; /* Just for visibility */
+    .outer-div {
+      display: flex;
+      justify-content: space-between;
+      background-color: lightgray; /* Just for visibility */
       padding: 20px; /* Just for visibility */
     }
+
+    .left-div, .right-div {
+      width: 200px; /* Adjust the width as needed, leave some space for margin or padding */
+      background-color: white; /* Just for visibility */
+      padding: 10px; /* Just for visibility */
+      box-sizing: border-box; /* Ensure padding doesn't affect width */
+    }
   </style>
-  <title>Centered Div Example</title>
+  <title>Two Divs Example</title>
 </head>
 <body>
 
-  <div class="centered-div">
-    <!-- Your content goes here -->
+  <div class="outer-div">
+    <div class="left-div">
+      <!-- Content for the left div -->
+      Left Content
+    </div>
+    <div class="right-div">
+      <!-- Content for the right div -->
+      Right Content
+    </div>
   </div>
 
 </body>

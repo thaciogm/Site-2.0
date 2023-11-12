@@ -943,14 +943,13 @@ input.input_cadastrar::placeholder{
 
 #duvidas .pergunta{
     width: 430px;
-    margin-right: 245px;
 }
 
 #duvidas .pergunta h3{
         color: var(--Gray, #373536);
         font-family: QuicksandBold;
         font-size: 18px;
-    }
+}
 
 #duvidas .icone{
     width: 45px;
@@ -976,9 +975,17 @@ input.input_cadastrar::placeholder{
 #duvidas .icone a{
     position: absolute;
     display: none;
+    color: var(--Gray, #373536);
+    text-align: center;
+    font-family: Rubik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
 }
 
-#duvidas .resposta{
+#duvidas .resposta p{
     color: var(--lIGHT-gRAY, #5E5E5E);
     /* Mono P */
     font-family: Rubik;
@@ -988,15 +995,18 @@ input.input_cadastrar::placeholder{
     line-height: normal;
 }
 
-#duvidas .button{
-
+#duvidas .resposta{
+    flex: 1;
 }
 
 #duvidas .nivel_1{
     display: flex;
     flex-direction: row;
-    min-width: 731px;
-    width: 731px;
+    justify-content: space-between;
+
+    max-width: 731px;
+    width: 41vw;
+    padding-right: 18px;
 /*     background-color: pink; */
 }
 
@@ -1044,6 +1054,9 @@ input.input_cadastrar::placeholder{
 
 #baixar .btn{
     background: none;
+}
+
+#baixar .side-by-side a:first-child{
     margin-right: 29px;
 }
 
@@ -1058,6 +1071,7 @@ input.input_cadastrar::placeholder{
 #baixar .titulo >*{
     text-align: left;
     padding-left: 0;
+    padding-right: 0;
     padding-bottom: 18px;
     padding-top: 18px;
 }
@@ -1069,7 +1083,8 @@ input.input_cadastrar::placeholder{
 
 hr.solid {
 /*     border-top: 3px solid #bbb; */
-    width: 1110px;
+    max-width: 1110px;
+    width: 77vw;
     height: 1px;
     background: var(--Light-Blue, #ECF9FF);
 }
@@ -1588,6 +1603,110 @@ footer{
         font-size:9px;
     }
 
+
+    
+
+
+
+
+    #duvidas .conteudo{
+/*         max-width: 1440px;
+        width: 80vw; */
+        padding-top: 44px;
+    }
+    
+    #duvidas .row{
+/*         display: flex;
+        flex-direction: row;
+        width: 100%; */
+        padding-top: 18px;/*25px*/
+        padding-bottom: 18px;/*25px*/
+    }
+    
+    #duvidas .pergunta{
+        width: 30vw;
+    }
+    
+    #duvidas .pergunta h3{
+            font-size: 14px;
+    }
+    
+    #duvidas .icone{
+        width: 41px;
+        height: 22px;
+/*         width: 28.599px;
+        height: 26px; */
+    }
+    
+    #duvidas .icone p{
+        font-size: 10px;
+/*         display: none; */
+    }
+    
+    #duvidas .icone a{
+/*         display: flex; */
+    }
+    
+    #duvidas .resposta p{
+        font-size: 12px;
+    }
+    
+    #duvidas .resposta{
+/*         flex: 1; */
+    }
+    
+    #duvidas .nivel_1{
+/*         max-width: 731px;
+        width: 41vw;
+        padding-right: 18px; */
+    }
+
+
+
+
+
+
+
+    #baixar{
+        height: 465px;
+    }
+    
+    
+    #baixar .fundo_claro{
+        height: 222px;
+    }
+    
+    #baixar .fundo_escuro{
+        height: 243px;
+    }
+    
+    #baixar .fundo_branco{
+        width: 711.818px;
+        height: 304.267px;
+        top: 115px;
+    }
+    
+    #baixar .side-by-side{
+        padding-bottom: 12.5px;
+        padding-top: 12.5px;
+    }
+
+    #baixar .side-by-side a:first-child{
+        margin-right: 20px;
+    }
+    
+    #baixar .fundo_branco div:first-child div{
+        padding-left: 40.5px;
+    }
+    
+    #baixar .fundo_branco div:first-child div:first-child{
+        padding-top: 50px;
+    }
+    
+    #baixar .titulo >*{
+        padding-bottom: 12.5px;
+        padding-top: 12.5px;
+    }
 }
 
 
@@ -1900,5 +2019,125 @@ footer{
         /*         align-items: center;
                 justify-content: center; */
             /*     vertical-align: middle; */
+    }
+
+
+
+
+
+
+
+    #duvidas .conteudo{
+        width: 92vw;
+/*         padding-top: 44px; */
+    }
+    
+    #duvidas .row{
+/*         display: flex; */
+        flex-direction: column;
+/*         width: 100%; */
+        padding-top: 12px;/*25px*/
+        padding-bottom: 12px;/*25px*/
+    }
+    
+    #duvidas .pergunta{
+        width: 64vw;
+    }
+    
+    #duvidas .pergunta h3{
+/*             font-size: 14px; */
+    }
+    
+    #duvidas .icone{
+        width: 28.599px;
+        height: 26px;
+/*         width: 28.599px;
+        height: 26px; */
+    }
+    
+    #duvidas .icone p{
+        display: none;
+    }
+    
+    #duvidas .icone a{
+        display: flex;
+    }
+    
+    #duvidas .resposta p{
+/*         font-size: 12px; */
+    }
+    
+    #duvidas .resposta{
+        padding-top: 10px;
+        display: none;
+    }
+    
+    #duvidas .nivel_1{
+/*         max-width: 731px; */
+        width: 100%;
+/*         padding-right: 18px; */
+    }
+
+
+
+
+
+
+
+
+    #baixar{
+/*         position: relative; */
+        height: 760px;
+        background-color: #ECF9FF;
+    }
+    
+    
+    #baixar .fundo_claro{
+        background-color: none;
+        height: 50%;
+        width: 100%;
+    }
+    
+    #baixar .fundo_escuro{
+        background: none;
+        height: 50%px;
+        width: 100%;
+    }
+    
+    #baixar .fundo_branco{
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: none;
+        flex-direction: column-reverse;
+        top: 0;
+        justify-content: end;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+    
+    #baixar .titulo{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #baixar .fundo_branco div:first-child div{
+        padding-left: 0px;
+    }
+    
+    #baixar .fundo_branco div:first-child div:first-child{
+        padding-top: 0px;
+    }
+
+    #baixar .titulo >*{
+        text-align: center;
+    }
+    
+    #baixar .fundo_branco div:last-child picture{
+        top: 0;
+    }
+
+    hr.solid {
+        display: none;
     }
 }

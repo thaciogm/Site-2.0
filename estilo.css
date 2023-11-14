@@ -1087,15 +1087,54 @@ hr.solid {
     width: 77vw;
     height: 1px;
     background: var(--Light-Blue, #ECF9FF);
+    border-color: #ECF9FF;
 }
 
 footer{
-    height: 233px;
+    height: 289px;
     width: 100%;
     background: #1979BB;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+}
+
+.texto_footer p, .texto_footer a {
+    color: var(--Light-Blue, #ECF9FF);
+    text-align: center;
+    /* Mono P */
+    font-family: Rubik;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+footer .botoes_contatos{
+    width: 200px;/*170px*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto_direitos{
+    width: 100%;
+    height: 56px;
+    background: #2E86C2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto_direitos p{
+    color: #FFF;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 
@@ -1158,6 +1197,7 @@ footer{
         margin-right: 16px;
     }
 } */
+
 
 @media screen and (min-width: 1900px) {
     body{
@@ -1410,7 +1450,7 @@ footer{
         height: 250px;
     
         top: 70px;
-    
+
 /*         background-color: green; */
 /*         display: flex;
         flex-direction: column;
@@ -1707,6 +1747,26 @@ footer{
         padding-bottom: 12.5px;
         padding-top: 12.5px;
     }
+
+    footer{
+        height: 244px;
+    }
+    
+    .texto_footer p, .texto_footer a {
+        font-size: 12px;
+    }
+    
+    footer .botoes_contatos{
+        width: 170px;/*170px*/
+    }
+    
+    .texto_direitos{
+        height: 31.451px;
+    }
+    
+    .texto_direitos p{
+        font-size: 14px;
+    }
 }
 
 
@@ -1749,6 +1809,8 @@ footer{
         background-color: #ECF9FF;
         width: 162px;
     }
+
+
 }
 
 
@@ -2007,6 +2069,10 @@ footer{
         margin-right: 100px;
     }
 
+    #planos .botao_topico {
+        background: none;
+    }
+
     #cards{
 /*         width: 860px; */
         transition: margin-left 0.3s;
@@ -2138,6 +2204,29 @@ footer{
     }
 
     hr.solid {
-        display: none;
+        background: #1979BB;
+        border-color: #1979BB;
+    }
+
+    .disabled {
+        pointer-events: none;
+      }
+
+    .disabled img{
+        opacity: 0.3;
+    }
+}
+
+@media screen and (min-width: 781px) {
+    #div_topicos_como_usar{
+        margin-left: 0px !important;
+    }
+
+    #numeros{
+        margin-left: 0px !important;
+    }
+
+    #cards{
+        margin-left: 0px !important;
     }
 }

@@ -164,16 +164,16 @@
                         </ul>
                     </div>
                     <div class="sistema_topicos side-by-side">
-                        <div class="botao_passa_topico">
-                            <a onclick="moveTopicoEsquerda()" class="botao_topico" id="btn_esq">
+                        <div class="botao_passa_topico" id="move_topico_esq">
+                            <a onclick="move(ESQUERDA,document.getElementById('div_topicos_como_usar'), document.getElementById('move_topico_esq'),document.getElementById('move_topico_dir'), salto_move_topico, limite_esq_move_topico, limite_dir_move_topico)"  class="botao_topico" id="btn_esq">
                                 <img src="images/seta_esq_topico.svg">
                             </a>
                         </div>
                         <div class="div_vizualizacao_topicos">
 
                         </div>
-                        <div class="botao_passa_topico">
-                            <a onclick="moveTopicoDireita()" class="botao_topico" id="btn_dir">
+                        <div class="botao_passa_topico" id="move_topico_dir">
+                            <a onclick="move(DIREITA,document.getElementById('div_topicos_como_usar'), document.getElementById('move_topico_esq'),document.getElementById('move_topico_dir'), salto_move_topico, limite_esq_move_topico, limite_dir_move_topico)" class="botao_topico" id="btn_dir">
                                 <img src="images/seta_dir_topico.svg">
                             </a>
                         </div>
@@ -292,16 +292,16 @@
                     </div>
                 </div>
                 <div class="sistema_topicos side-by-side">
-                    <div class="botao_passa_topico">
-                        <a onclick="moveNumeroEsquerda()" class="botao_topico" id="btn_esq">
+                    <div class="botao_passa_topico" id="move_numero_esq">
+                        <a onclick="move(ESQUERDA,document.getElementById('numeros'), document.getElementById('move_numero_esq'),document.getElementById('move_numero_dir'), salto_move_numero, limite_esq_move_numero, limite_dir_move_numero)" class="botao_topico" id="btn_esq">
                             <img src="images/seta_esq_topico.svg">
                         </a>
                     </div>
                     <div class="div_vizualizacao_topicos">
 
                     </div>
-                    <div class="botao_passa_topico">
-                        <a onclick="moveNumeroDireita()" class="botao_topico" id="btn_dir">
+                    <div class="botao_passa_topico" id="move_numero_dir">
+                        <a onclick="move(DIREITA,document.getElementById('numeros'), document.getElementById('move_numero_esq'),document.getElementById('move_numero_dir'), salto_move_numero, limite_esq_move_numero, limite_dir_move_numero)" class="botao_topico" id="btn_dir">
                             <img src="images/seta_dir_topico.svg">
                         </a>
                     </div>
@@ -446,7 +446,7 @@
                     </div>
                 </div>
                 <div class="sistema_topicos side-by-side">
-                    <div class="botao_passa_topico">
+                    <div class="botao_passa_topico" id="move_card_esq">
                         <a onclick="moveCardEsquerda()" class="botao_topico" id="btn_esq">
                             <img src="images/seta_esq_topico.svg">
                         </a>
@@ -454,7 +454,7 @@
                     <div class="div_vizualizacao_topicos">
 
                     </div>
-                    <div class="botao_passa_topico">
+                    <div class="botao_passa_topico" id="move_card_dir">
                         <a onclick="moveCardDireita()" class="botao_topico" id="btn_dir">
                             <img src="images/seta_dir_topico.svg">
                         </a>
@@ -478,7 +478,7 @@
                         </div>
                     </div>
                     <div class="resposta">
-                        <p>O Professor Estrutural é um software de cunho acadêmico que busca auxiliar no aprendizado da  Análise Estrutural. É uma aplicação que ensina o usuário a calcular vigas através dos métodos básicos de análise.</p>
+                        <p>O Professor Estrutural é um software de cunho acadêmico que busca auxiliar no aprendizado da Análise Estrutural. É uma aplicação que ensina o usuário a calcular vigas através dos métodos básicos de análise.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -596,13 +596,21 @@
         <footer>
             <hr class="solid">
             <div class="texto_footer">
-
+                <p>Av. João XXIII, 2220 - Santos Reis,<br> Montes Claros - MG, 39400-162</p>
             </div>
             <div class="texto_footer">
-
+                <a>contact@professorestrutural.com.br</a>
             </div>
             <div class="botoes_contatos">
-
+                <a>
+                    <img src="images/rodape_icone_zap.svg">
+                </a>
+                <a>
+                    <img src="images/rodape_icone_email.svg">
+                </a>
+                <a>
+                    <img src="images/rodape_icone_insta.svg">
+                </a>
             </div>
             <div class="texto_direitos">
                 <p>&copy; 2023 Professor Estrutural. All rights reserved.</p>
@@ -610,6 +618,17 @@
         </footer>
 
         <script>
+            const DIREITA = -1;
+            const ESQUERDA = 1;
+            var limite_esq_move_topico = 0;
+            var limite_dir_move_topico = -330;
+            var salto_move_topico = 165;
+            var limite_esq_move_numero = 570;
+            var limite_dir_move_numero = -570;
+            var salto_move_numero = 570;
+            var limite_esq_move_card = 720;
+            var limite_dir_move_card = -680;
+
             function myFunction() {
                 var x = document.getElementById("myNav");
                 var y = document.getElementById("icon");
@@ -620,44 +639,14 @@
                 }
             }
 
-            function moveTopicoDireita() {
-                var y = document.getElementById("div_topicos_como_usar");
+            function move(direcao, div, botao_esq, botao_dir, salto, limite_esq, limite_dir) {
+                var x = parseFloat(window.getComputedStyle(div).getPropertyValue("margin-left"));
 
-                var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+                div.style.marginLeft = ((x + direcao * salto) + "px")
 
-                y.style.marginLeft = ((x - 165) + "px")
+                var valor_atual = parseFloat(window.getComputedStyle(div).getPropertyValue("margin-left"));
 
-                console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
-            }
-
-            function moveTopicoEsquerda() {
-                var y = document.getElementById("div_topicos_como_usar");
-
-                var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
-
-                y.style.marginLeft = ((x + 165) + "px")
-
-                console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
-            }
-
-            function moveNumeroDireita() {
-                var y = document.getElementById("numeros");
-
-                var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
-
-                y.style.marginLeft = ((x - 570) + "px")
-
-                console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
-            }
-
-            function moveNumeroEsquerda() {
-                var y = document.getElementById("numeros");
-
-                var x = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
-
-                y.style.marginLeft = ((x + 570) + "px")
-
-                console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
+                updateButtonVisibility(botao_esq, botao_dir, limite_esq, limite_dir, valor_atual + direcao * salto)
             }
 
             function moveCardDireita() {
@@ -675,6 +664,12 @@
                 }, delayInMilliseconds);
 
                 console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
+
+                var botao_esq= document.getElementById("move_card_esq");
+                var botao_dir= document.getElementById("move_card_dir");
+                var valor_atual = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+
+                updateButtonVisibility(botao_esq, botao_dir, limite_esq_move_card, limite_dir_move_card, valor_atual -680-720)
             }
 
             function moveCardEsquerda() {
@@ -692,6 +687,12 @@
                 }, delayInMilliseconds);
 
                 console.log(window.getComputedStyle(y).getPropertyValue("margin-left"))
+
+                var botao_esq= document.getElementById("move_card_esq");
+                var botao_dir= document.getElementById("move_card_dir");
+                var valor_atual = parseFloat(window.getComputedStyle(y).getPropertyValue("margin-left"));
+
+                updateButtonVisibility(botao_esq, botao_dir,  limite_esq_move_card, limite_dir_move_card, valor_atual+680+720)
             }
 
             function toggleContent(button) {
@@ -726,6 +727,80 @@
                     }
                 });
             });
+
+            // Check the screen width on page load
+            window.onload = function () {
+                checkScreenWidth();
+            };
+
+            // Check the screen width when the window is resized
+            window.onresize = function () {
+                checkScreenWidth();
+            };
+
+            // Function to check the screen width and call the appropriate function
+            function checkScreenWidth() {
+                if (window.innerWidth <= 780) {
+                    onSmallScreen();
+                }
+            }
+
+            function onSmallScreen() {
+                // Your JavaScript code for small screens here
+                console.log("Small screen detected!");
+
+
+                var delayInMilliseconds = 400; //1 second
+
+                setTimeout(function() {
+                    updateAllButtons();
+                }, delayInMilliseconds);
+
+
+                
+
+            }
+
+            function updateAllButtons(){
+                var botao_esq= document.getElementById("move_topico_esq");
+                var botao_dir= document.getElementById("move_topico_dir");
+                var div = document.getElementById("div_topicos_como_usar");
+                var valor_atual = parseFloat(window.getComputedStyle(div).getPropertyValue("margin-left"));
+                updateButtonVisibility(botao_esq, botao_dir, limite_esq_move_topico, limite_dir_move_topico, valor_atual)
+
+
+                botao_esq= document.getElementById("move_numero_esq");
+                botao_dir= document.getElementById("move_numero_dir");
+                var div = document.getElementById("numeros");
+                var valor_atual = parseFloat(window.getComputedStyle(div).getPropertyValue("margin-left"));
+                updateButtonVisibility(botao_esq, botao_dir, limite_esq_move_numero, limite_dir_move_numero, valor_atual)
+
+
+                botao_esq= document.getElementById("move_card_esq");
+                botao_dir= document.getElementById("move_card_dir");
+                var div = document.getElementById("cards");
+                var valor_atual = parseFloat(window.getComputedStyle(div).getPropertyValue("margin-left"));
+                updateButtonVisibility(botao_esq, botao_dir, limite_esq_move_card, limite_dir_move_card, valor_atual)
+            }
+
+            function updateButtonVisibility(botao_esq, botao_dir, limite_esq, limite_dir, valor_atual){
+                console.log("va="+valor_atual+" le="+limite_esq+" ld="+limite_dir);
+                if (valor_atual >= limite_esq){
+                    console.log("desabilita esq");
+                    botao_esq.classList.add('disabled');
+                } else{
+                    console.log("habilita esq");
+                    botao_esq.classList.remove('disabled');
+                }
+                if (valor_atual <= limite_dir){
+                    console.log("desabilita dir");
+                    botao_dir.classList.add('disabled');
+                } else{
+                    console.log("habilita dir");
+                    botao_dir.classList.remove('disabled');
+                }
+                console.log("");
+            }
         </script>
     </body>
 </html>

@@ -188,9 +188,16 @@
             </div>
         </section>
         <section id="recursos">
-            <div class="container">
-            <div class="titulo">
-                <h2>Podemos oferecer as melhores<br>facilidades para você!</h2>
+            <div class="molde">
+                <div class="titulo">
+                    <h2>Podemos oferecer as melhores<br>facilidades para você!</h2>
+                </div>
+                <div class="decoracao">
+                    <picture>
+                        <source media="(max-width: 1270px)" srcset="images/recursos_sublinhado_menor.svg"/>
+                        <img class="sublinhados" id="sublinhado-recursos" src="images/recursos_sublinhado.svg">
+                    </picture>
+                </div>
             </div>
             <div class="conteudo">
                 <div class="topicos_recursos">
@@ -264,7 +271,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
         </section>
         <section id="section_numeros">
             <div class="titulo">
@@ -876,7 +882,7 @@
                 triggered: false,
                 callback: () => {
                 if (!elementsToTrigger[1].triggered) {
-                    const sublinhado = document.getElementById('sublinhado-como_usar');
+                    let sublinhado = document.getElementById('sublinhado-como_usar');
                     setTimeout(function() {
                         efeitoSublinhado(sublinhado);
                     },200);
@@ -889,12 +895,17 @@
                 }
             },
             {
-                element: document.getElementById('recursos').querySelector('.titulo'),
+                element: document.getElementById('recursos').querySelector(' .titulo'),
                 offsettop: _offset_top,
                 offsetbottom: _offset_bottom,
                 triggered: false,
                 callback: () => {
                 if (!elementsToTrigger[2].triggered) {
+                    let sublinhado = document.getElementById('sublinhado-recursos');
+                    setTimeout(function() {
+                        efeitoSublinhado(sublinhado);
+                    },200);
+
                     console.log('Element recursos is in view!');
                     elementsToTrigger[2].triggered = true;
                 }
@@ -976,7 +987,7 @@
                     /* console.log(''); */
                     // Reset triggered flag when the element goes out of the viewport
                     if (currentScrollY + window.innerHeight < elementTop || currentScrollY > elementBottom) {
-                        tiraEfeito(element);
+                        /* tiraEfeito(element); */
                         elementsToTrigger[index].triggered = false;
                     }
                 });

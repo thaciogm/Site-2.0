@@ -4,34 +4,99 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    .outer-div {
-      display: flex;
-      justify-content: space-between;
-      background-color: lightgray; /* Just for visibility */
-      padding: 20px; /* Just for visibility */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 400vh; /* Added height for scrolling */
     }
 
-    .left-div, .right-div {
-      width: 200px; /* Adjust the width as needed, leave some space for margin or padding */
-      background-color: white; /* Just for visibility */
-      padding: 10px; /* Just for visibility */
-      box-sizing: border-box; /* Ensure padding doesn't affect width */
+    .element {
+      height: 70vh;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
     }
   </style>
-  <title>Two Divs Example</title>
 </head>
 <body>
 
-  <div class="outer-div">
-    <div class="left-div">
-      <!-- Content for the left div -->
-      Left Content
-    </div>
-    <div class="right-div">
-      <!-- Content for the right div -->
-      Right Content
-    </div>
-  </div>
+<div id="element1" class="element"></div>
+<div id="element2" class="element"></div>
+<div id="element3" class="element"></div>
+
+<script>
+  const elementsToTrigger = [
+    {
+      element: document.getElementById('element1'),
+      offset: 200,
+      triggered: false,
+      callback: () => {
+        if (!elementsToTrigger[0].triggered) {
+          console.log('Element 1 is in view!');
+          elementsToTrigger[0].triggered = true;
+        }
+      }
+    },
+    {
+      element: document.getElementById('element2'),
+      offset: 150,
+      triggered: false,
+      callback: () => {
+        if (!elementsToTrigger[1].triggered) {
+          console.log('Element 2 is in view!');
+          elementsToTrigger[1].triggered = true;
+        }
+      }
+    },
+    {
+      element: document.getElementById('element3'),
+      offset: 100,
+      triggered: false,
+      callback: () => {
+        if (!elementsToTrigger[2].triggered) {
+          console.log('Element 3 is in view!');
+          elementsToTrigger[2].triggered = true;
+        }
+      }
+    },
+    // Add more objects for additional elements
+  ];
+
+  function debounce(func, wait) {
+    let timeout;
+    return function () {
+      const context = this;
+      const args = arguments;
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+  }
+
+  function handleScroll() {
+    const currentScrollY = window.scrollY;
+
+    elementsToTrigger.forEach(({ element, offset, callback, triggered }, index) => {
+      const elementTop = element.offsetTop;
+      const elementBottom = elementTop + element.offsetHeight;
+
+      // Check if the element is within the viewport based on the offset
+      if (!triggered && currentScrollY + window.innerHeight >= elementTop + offset && currentScrollY <= elementBottom - offset) {
+        callback();
+      }
+
+      // Reset triggered flag when the element goes out of the viewport
+      if (currentScrollY + window.innerHeight < elementTop || currentScrollY > elementBottom) {
+        elementsToTrigger[index].triggered = false;
+      }
+    });
+  }
+
+  // Debounce the handleScroll function
+  const debouncedHandleScroll = debounce(handleScroll, 400); // Adjust the debounce time as needed
+
+  // Attach the debounced handleScroll function to the window's scroll event
+  window.addEventListener('scroll', debouncedHandleScroll);
+</script>
 
 </body>
 </html>

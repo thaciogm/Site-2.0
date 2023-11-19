@@ -273,10 +273,18 @@
             </div>
         </section>
         <section id="section_numeros">
-            <div class="titulo">
-                <h3>PROFESSOR ESTRUTURAL</h3>
-                <h2>Por que somos a <br class="quebra_tela_pequena">melhor escolha?</h2>
-                <p>Nosso software concentra-se na análise de vigas, oferecendo procedimentos de cálculo abrangentes para <br class="quebra_tela_grande">métodos de análise estrutural.</p>
+            <div class="molde">
+                <div class="titulo">
+                    <h3>PROFESSOR ESTRUTURAL</h3>
+                    <h2>Por que somos a <br class="quebra_tela_pequena">melhor escolha?</h2>
+                    <p>Nosso software concentra-se na análise de vigas, oferecendo procedimentos de cálculo abrangentes para <br class="quebra_tela_grande">métodos de análise estrutural.</p>
+                </div>
+                <div class="decoracao">
+                    <picture>
+                        <source media="(max-width: 1270px)" srcset="images/numeros_sublinhado_menor.svg"/>
+                        <img class="sublinhados" id="sublinhado-numeros" src="images/numeros_sublinhado.svg">
+                    </picture>
+                </div>
             </div>
             <div class="conteudo">
                 <div id="numeros">
@@ -323,30 +331,38 @@
             </div>
         </section>
         <section id="avaliacoes">
-            <div class="titulo">
-                <h2>"A experiência de cálculo e<br class="quebra_tela_pequena"> aprendizado<br class="quebra_tela_grande"> da Análise<br class="quebra_tela_pequena"> Estrutural ficou mais fácil com<br> esse software”</h2>
-                <p>Valorizamos nossos clientes e suas experiências utilizando o Professor Estrutural.</p>
+            <div class="container">
+                <div class="titulo">
+                    <h2>"A experiência de cálculo e<br class="quebra_tela_pequena"> aprendizado<br class="quebra_tela_grande"> da Análise<br class="quebra_tela_pequena"> Estrutural ficou mais fácil com<br> esse software”</h2>
+                    <p>Valorizamos nossos clientes e suas experiências utilizando o Professor Estrutural.</p>
+                </div>
+                <div class="conteudo">
+                    <div class="text_field_cadastrar div_cadastrar">
+                        <form>
+                            <input class="text_field_cadastrar input_cadastrar" type="email" id="email" placeholder="Insira seu e-mail" autocomplete="username" required>
+                            <a href="" class="btn btn-escuro" id="btn-cadastro-cab">
+                                <img class="img-btn" src="images/vector_cadastro.svg">
+                                <span class="span-btn">Cadastrar</span>
+                            </a>
+                        </form>
+                    </div>
+                    <div>
+                        <picture>
+                            <source media="(max-width: 1270px)" srcset="images/avaliacoes_tela_menor.svg">
+                            <img src="images/avaliacoes_tela.svg">
+                        </picture>
+                    </div>
+                </div>
             </div>
-            <div class="conteudo">
-                <div class="text_field_cadastrar div_cadastrar">
-                    <form>
-                        <input class="text_field_cadastrar input_cadastrar" type="email" id="email" placeholder="Insira seu e-mail" autocomplete="username" required>
-                        <a href="" class="btn btn-escuro" id="btn-cadastro-cab">
-                            <img class="img-btn" src="images/vector_cadastro.svg">
-                            <span class="span-btn">Cadastrar</span>
-                        </a>
-                    </form>
-                </div>
-                <div>
-                    <picture>
-                        <source media="(max-width: 1270px)" srcset="images/avaliacoes_tela_menor.svg">
-                        <img src="images/avaliacoes_tela.svg">
-                    </picture>
-                </div>
-                
+            <div class="decoracao">
+                <picture>
+                    <source media="(max-width: 1270px)" srcset="images/avaliacoes_sublinhado_menor.svg"/>
+                    <img class="sublinhados" id="sublinhado-avaliacoes" src="images/avaliacoes_sublinhado.svg">
+                </picture>
             </div>
         </section>
         <section id="planos">
+<!--             <div class="container"> -->
             <div class="titulo"  id="titulo_planos">
                 <h2>Simples. Transparente. <br>Conheça Professor Estrutural.</h2>
                 <p>Escolha o melhor método para você.</p>
@@ -453,7 +469,7 @@
                         <div class="melhor_escolha">
                             <picture>
                                 <source media="(max-width: 1270px)" srcset="images/plano_faixa_melhorescolha_menor.svg">
-                                <img src="images/plano_faixa_melhorescolha.svg">
+                                <img  id="img-melhor-escolha" src="images/plano_faixa_melhorescolha.svg">
                             </picture>
                             <p class="diagonal">Melhor Escolha</p>
                         </div>
@@ -475,10 +491,25 @@
                     </div>
                 </div>
             </div>
+<!--         </div> -->
+        <div class="decoracao">
+            <picture>
+                <source media="(max-width: 1270px)" srcset="images/planos_sublinhado_menor.svg"/>
+                <img class="sublinhados" id="sublinhado-planos" src="images/planos_sublinhado.svg">
+            </picture>
+        </div>
         </section>
         <section id="duvidas">
-            <div class="titulo">
-                <h2>Temos um FAQ para te<br> informar melhor</h2>
+            <div class="molde">
+                <div class="titulo">
+                    <h2>Temos um FAQ para te<br> informar melhor</h2>
+                </div>
+                <div class="decoracao">
+                    <picture>
+                        <source media="(max-width: 1270px)" srcset="images/duvidas_sublinhado_menor.svg"/>
+                        <img class="sublinhados" id="sublinhado-duvidas" src="images/duvidas_sublinhado.svg">
+                    </picture>
+                </div>
             </div>
             <div class="conteudo">
                 <div class="row">
@@ -857,22 +888,22 @@
                 offsetbottom: _offset_bottom,
                 triggered: false,
                 callback: () => {
-                if (!elementsToTrigger[0].triggered) {
+                    if (!elementsToTrigger[0].triggered) {
 
-                    let sublinhado = document.getElementById('sublinhado-home');
-                    let circulado = document.getElementById('circulado');
-                    setTimeout(function() {
-                        efeitoSublinhado(sublinhado);
+                        let sublinhado = document.getElementById('sublinhado-home');
+                        let circulado = document.getElementById('circulado');
                         setTimeout(function() {
-                            efeitoCirculado(circulado);
-                        },1000);
-                    },200);
+                            efeitoSublinhado(sublinhado);
+                            setTimeout(function() {
+                                efeitoCirculado(circulado);
+                            },1000);
+                        },200);
 
 
 
-                    console.log('Element home is in view!');
-                    elementsToTrigger[0].triggered = true;
-                }
+                        console.log('Element home is in view!');
+                        elementsToTrigger[0].triggered = true;
+                    }
                 }
             },
             {
@@ -881,17 +912,17 @@
                 offsetbottom: _offset_bottom,
                 triggered: false,
                 callback: () => {
-                if (!elementsToTrigger[1].triggered) {
-                    let sublinhado = document.getElementById('sublinhado-como_usar');
-                    setTimeout(function() {
-                        efeitoSublinhado(sublinhado);
-                    },200);
+                    if (!elementsToTrigger[1].triggered) {
+                        let sublinhado = document.getElementById('sublinhado-como_usar');
+                        setTimeout(function() {
+                            efeitoSublinhado(sublinhado);
+                        },200);
 
 
 
-                    console.log('Element como_usar is in view!');
-                    elementsToTrigger[1].triggered = true;
-                }
+                        console.log('Element como_usar is in view!');
+                        elementsToTrigger[1].triggered = true;
+                    }
                 }
             },
             {
@@ -900,15 +931,15 @@
                 offsetbottom: _offset_bottom,
                 triggered: false,
                 callback: () => {
-                if (!elementsToTrigger[2].triggered) {
-                    let sublinhado = document.getElementById('sublinhado-recursos');
-                    setTimeout(function() {
-                        efeitoSublinhado(sublinhado);
-                    },200);
+                    if (!elementsToTrigger[2].triggered) {
+                        let sublinhado = document.getElementById('sublinhado-recursos');
+                        setTimeout(function() {
+                            efeitoSublinhado(sublinhado);
+                        },200);
 
-                    console.log('Element recursos is in view!');
-                    elementsToTrigger[2].triggered = true;
-                }
+                        console.log('Element recursos is in view!');
+                        elementsToTrigger[2].triggered = true;
+                    }
                 }
             },
             {
@@ -917,10 +948,16 @@
                 offsetbottom: _offset_bottom,
                 triggered: false,
                 callback: () => {
-                if (!elementsToTrigger[3].triggered) {
-                    console.log('Element numeros is in view!');
-                    elementsToTrigger[3].triggered = true;
-                }
+                    if (!elementsToTrigger[3].triggered) {
+                        let sublinhado = document.getElementById('sublinhado-numeros');
+                        setTimeout(function() {
+                            efeitoSublinhado(sublinhado);
+                        },200);
+
+
+                        console.log('Element numeros is in view!');
+                        elementsToTrigger[3].triggered = true;
+                    }
                 }
             },
             {
@@ -930,6 +967,13 @@
                 triggered: false,
                 callback: () => {
                 if (!elementsToTrigger[4].triggered) {
+                    /*sublinhado-avaliacoes*/
+                    let sublinhado = document.getElementById('sublinhado-avaliacoes');
+                    setTimeout(function() {
+                        efeitoSublinhado(sublinhado);
+                    },200);
+
+
                     console.log('Element avaliacoes is in view!');
                     elementsToTrigger[4].triggered = true;
                 }
@@ -942,6 +986,12 @@
                 triggered: false,
                 callback: () => {
                 if (!elementsToTrigger[5].triggered) {
+                    /*sublinhado-planos*/
+                    let sublinhado = document.getElementById('sublinhado-planos');
+                    setTimeout(function() {
+                        efeitoSublinhado(sublinhado);
+                    },200);
+
                     console.log('Element planos is in view!');
                     elementsToTrigger[5].triggered = true;
                 }
@@ -954,6 +1004,12 @@
                 triggered: false,
                 callback: () => {
                 if (!elementsToTrigger[6].triggered) {
+                    /*sublinhado-duvidas*/
+                    let sublinhado = document.getElementById('sublinhado-duvidas');
+                    setTimeout(function() {
+                        efeitoSublinhado(sublinhado);
+                    },200);
+
                     console.log('Element duvidas is in view!');
                     elementsToTrigger[6].triggered = true;
                 }

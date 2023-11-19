@@ -3,100 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decoracao and Titulo Example</title>
   <style>
-    body {
+    /* Reset some default styles */
+    * {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      height: 400vh; /* Added height for scrolling */
+      box-sizing: border-box;
     }
 
-    .element {
-      height: 70vh;
-      background-color: #f0f0f0;
-      margin-bottom: 20px;
+    /* Set a relative position for the container "molde" */
+    .molde {
+      position: relative;
+      width: 60%; /* Adjust the width as needed */
+      margin: auto; /* Center the container */
+      background-color: aqua;
+      overflow: hidden; /* Ensure that child elements don't extend beyond the container */
     }
+
+    /* Style for the "titulo" div */
+    .titulo {
+      position: relative; /* Set position to relative */
+      width: 80%;
+      height: 80%;
+      margin: auto;
+      padding: 20px;
+      /* background-color: red; */ /* Add any other styles you need for the "titulo" div */
+      z-index: 0;
+    }
+
+    h2{
+      z-index: 2;
+    }
+
+    /* Style for the "decoracao" div */
+    .decoracao {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: 50%;
+      background-color: blue; /* Add any other styles you need for the "decoracao" div */
+      opacity: 1; /* Adjust the opacity as needed */
+      z-index: 1; /* Set a z-index lower than "titulo::before" but higher than text */
+    }
+
+    /* Style for the background of "titulo" */
+/*     .titulo::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+
+      z-index: 0;
+    } */
   </style>
 </head>
 <body>
 
-<div id="element1" class="element"></div>
-<div id="element2" class="element"></div>
-<div id="element3" class="element"></div>
-
-<script>
-  const elementsToTrigger = [
-    {
-      element: document.getElementById('element1'),
-      offset: 200,
-      triggered: false,
-      callback: () => {
-        if (!elementsToTrigger[0].triggered) {
-          console.log('Element 1 is in view!');
-          elementsToTrigger[0].triggered = true;
-        }
-      }
-    },
-    {
-      element: document.getElementById('element2'),
-      offset: 150,
-      triggered: false,
-      callback: () => {
-        if (!elementsToTrigger[1].triggered) {
-          console.log('Element 2 is in view!');
-          elementsToTrigger[1].triggered = true;
-        }
-      }
-    },
-    {
-      element: document.getElementById('element3'),
-      offset: 100,
-      triggered: false,
-      callback: () => {
-        if (!elementsToTrigger[2].triggered) {
-          console.log('Element 3 is in view!');
-          elementsToTrigger[2].triggered = true;
-        }
-      }
-    },
-    // Add more objects for additional elements
-  ];
-
-  function debounce(func, wait) {
-    let timeout;
-    return function () {
-      const context = this;
-      const args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func.apply(context, args), wait);
-    };
-  }
-
-  function handleScroll() {
-    const currentScrollY = window.scrollY;
-
-    elementsToTrigger.forEach(({ element, offset, callback, triggered }, index) => {
-      const elementTop = element.offsetTop;
-      const elementBottom = elementTop + element.offsetHeight;
-
-      // Check if the element is within the viewport based on the offset
-      if (!triggered && currentScrollY + window.innerHeight >= elementTop + offset && currentScrollY <= elementBottom - offset) {
-        callback();
-      }
-
-      // Reset triggered flag when the element goes out of the viewport
-      if (currentScrollY + window.innerHeight < elementTop || currentScrollY > elementBottom) {
-        elementsToTrigger[index].triggered = false;
-      }
-    });
-  }
-
-  // Debounce the handleScroll function
-  const debouncedHandleScroll = debounce(handleScroll, 400); // Adjust the debounce time as needed
-
-  // Attach the debounced handleScroll function to the window's scroll event
-  window.addEventListener('scroll', debouncedHandleScroll);
-</script>
+<section class="molde">
+  <div class="titulo">
+    <h3>PROFESSOR ESTRUTURAL</h3>
+    <h2>Por que somos a <br class="quebra_tela_pequena">melhor escolha?</h2>
+    <p>Nosso software concentra-se na análise de vigas, oferecendo procedimentos de cálculo abrangentes para <br class="quebra_tela_grande">métodos de análise estrutural.</p>
+    <div class="decoracao"></div>
+  </div>
+</section>
 
 </body>
 </html>

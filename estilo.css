@@ -593,6 +593,10 @@ section#home div#home-div div.side-by-side a:first-child{
     z-index: 50;
 }
 
+#como_usar .dec_cima{
+    height: 70%;
+}
+
 #avaliacoes .dec_cima{
     height: 50%;
 }

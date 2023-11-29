@@ -437,7 +437,7 @@ section#home div#home-div div.side-by-side a:first-child{
     overflow: hidden;
 }
 
-#tela{
+.notebook{
     position: absolute;
     height: 590px;
     display: flex;
@@ -573,6 +573,29 @@ section#home div#home-div div.side-by-side a:first-child{
     font-weight: 400;
     line-height: normal;
 } 
+
+.logo-animada{
+    width: 446.37px;
+    /*width: 295.886px;*/
+    z-index: 50;
+    left: calc(50% - 223px);/*148*/
+}
+
+#como_usar .logo-animada{
+    top: 300px;
+}
+
+#avaliacoes .logo-animada{
+    top: 470px;
+}
+
+.dec_cima{
+    z-index: 50;
+}
+
+#avaliacoes .dec_cima{
+    height: 50%;
+}
 
 #div_topicos_como_usar{
     width: 100%;
@@ -1560,6 +1583,18 @@ footer .botoes_contatos{
         top: 308px;
         left: 92%;
     }
+    
+    #como_usar .logo-animada{
+        width: 295.886px;
+        left: calc(50% - 148px);
+        top: 216px;
+    }
+    
+    #avaliacoes .logo-animada{
+        width: 256.721px;
+        left: calc(50% - 129px);
+        top: 305px;
+    }
 
     .div_topico{
         height: 90px;
@@ -1600,7 +1635,7 @@ footer .botoes_contatos{
         height: 530px;
     }
 
-    #tela{
+    .notebook{
         height: 390px;
     }
 
@@ -2149,11 +2184,21 @@ footer .botoes_contatos{
         display: none;
     }
 
+    #como_usar .logo-animada{
+        left: calc(50% - 148px);
+        top: 221px;
+    }
+    
+    #avaliacoes .logo-animada{
+        left: calc(50% - 129px);
+        top: 385px;
+    }
+
     #como_usar{
         height: 650px;
     }
 
-    #tela{
+    .notebook{
         height: 390px;
     }
 
@@ -2513,6 +2558,10 @@ footer .botoes_contatos{
 
     #recursos .div_topico {
         height: 210px;
+    }
+
+    #como_usar .logo-animada{
+        top: 235px;
     }
 }
 

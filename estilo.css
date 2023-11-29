@@ -1508,8 +1508,8 @@ footer .botoes_contatos{
     }
     
     #sublinhado-home{
-        top: 140px;
-        left: 50px;
+        top: 137px;
+        left: 48px;
     }
 
     #home-div-child {
@@ -1618,8 +1618,33 @@ footer .botoes_contatos{
     }
 
     #sublinhado-como_usar {
-        top: 35px;
-        left: calc(50% - 60px);
+        top: 37px;
+        left: calc(50% - 65px);
+    }
+
+    #sublinhado-recursos {
+        top: 115px;
+        left: calc(50% - 3px);
+    }
+
+    #sublinhado-numeros {
+        top: 125px;
+        left: calc(50% - 100px);
+    }
+
+    #sublinhado-avaliacoes {
+        top: 68px;
+        left: calc(50% + 60px);
+    }
+
+    #sublinhado-planos {
+        top: -1032px;
+        left: calc(50% - 80px);
+    }
+
+    #sublinhado-duvidas {
+        top: 65px;
+        left: calc(50% - 100px);
     }
 
     #recursos .molde{

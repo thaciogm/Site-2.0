@@ -1617,6 +1617,11 @@ footer .botoes_contatos{
     /*     vertical-align: middle; */
     }
 
+    #sublinhado-como_usar {
+        top: 35px;
+        left: calc(50% - 60px);
+    }
+
     #recursos .molde{
         height: 151px;
     }
@@ -1722,6 +1727,20 @@ footer .botoes_contatos{
         height: 1050px;
     }
 
+    #balao_depoimento{
+        width: 120px;
+        top: 73px;
+    }
+
+    #balao_depoimento #nome_depoimento{
+        font-size: 10px;
+        padding-bottom: 4px;
+    } 
+    
+    #balao_depoimento #conteudo_depoimento{
+        font-size: 8px;
+    } 
+
     #planos{
         height: 300px;
     }
@@ -1733,6 +1752,7 @@ footer .botoes_contatos{
     #planos .conteudo{
         top: -436px;/*-510px + 37px -13px= -486px*/
         height: 511px;
+        z-index: 10;
     }
     
     .card1{
@@ -1753,6 +1773,10 @@ footer .botoes_contatos{
         padding-top: 30px;
         padding-left: 28px;
         padding-right: 28px;
+    }
+
+    .card_plano{
+        z-index: 10;
     }
     
     .card_plano .imagem_plano{
@@ -2408,7 +2432,8 @@ footer .botoes_contatos{
 
     hr.solid {
         background: #1979BB;
-        border-color: #1979BB;
+/*         border-color: #1979BB; */
+        border: 0px solid #1979BB;
     }
 
     .disabled {

@@ -805,7 +805,9 @@
 
                     if (targetElement) {
                         const headerHeight = document.querySelector('header').offsetHeight;
-                        const targetOffset = targetElement.offsetTop - headerHeight;
+
+                        // Calcula o offset diretamente em relação à página
+                        const targetOffset = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
 
                         window.scrollTo({
                             top: targetOffset,
@@ -814,6 +816,9 @@
                     }
                 });
             });
+
+
+
 
             function efeitoSublinhado(imgg){
                 imgg.classList.add('sublinhado1');
@@ -1082,10 +1087,10 @@
             }
 
             function getElementOffsetTop(element) {
-  const rect = element.getBoundingClientRect();
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  return rect.top + scrollTop;
-}
+                const rect = element.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return rect.top + scrollTop;
+            }
 
             function tiraEfeito(element){
                 const parent = element.closest('section');

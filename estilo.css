@@ -2085,12 +2085,12 @@ footer .botoes_contatos{
 
     #sublinhado-numeros {
         top: 155px;
-        left: calc(50% - 95px);
+        left: calc(50% - 98px);
     }
 
     #sublinhado-avaliacoes {
         top: 98px;
-        left: calc(50% + 0px);
+        left: calc(50% + 7px);
     }
 
 /*     #sublinhado-planos {

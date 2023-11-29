@@ -1671,7 +1671,7 @@ footer .botoes_contatos{
         /*TRECHO DE TESTE*/
         max-width: 194px;
         width: 44vw;
-        height: 175px;
+        height: 195px;
     }
 
     .topicos_recursos ul{
@@ -2073,6 +2073,36 @@ footer .botoes_contatos{
         left: 25px;
     }
 
+/*     #sublinhado-como_usar {
+        top: 37px;
+        left: calc(50% - 65px);
+    }
+
+    #sublinhado-recursos {
+        top: 115px;
+        left: calc(50% - 3px);
+    } */
+
+    #sublinhado-numeros {
+        top: 155px;
+        left: calc(50% - 95px);
+    }
+
+    #sublinhado-avaliacoes {
+        top: 98px;
+        left: calc(50% + 0px);
+    }
+
+/*     #sublinhado-planos {
+        top: -1032px;
+        left: calc(50% - 80px);
+    } */
+
+/*     #sublinhado-duvidas {
+        top: 65px;
+        left: calc(50% - 100px);
+    }
+ */
     #home-div-child {
         padding-left: 15px;
     }
@@ -2293,9 +2323,11 @@ footer .botoes_contatos{
         height: 1150px;
     }
 
-    #avaliacoes .decoracao{
+    .itens_decoracao_aval{
         display: none;
     }
+
+    
 
     #planos{
         height: 300px;
